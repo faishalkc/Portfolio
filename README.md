@@ -26,7 +26,7 @@ This website showcases my projects, certifications, technical skills, and experi
 Clone the repository:
 
 ```bash
-git clone https://github.com/your-username/Portfolio.git
+git clone https://github.com/faishalkc/Portfolio.git
 ```
 
 Install dependencies:
