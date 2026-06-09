@@ -52,7 +52,7 @@ npm run build
 Muhammad Faishal Hady
 
 * GitHub: https://github.com/faishalkc/
-* Portfolio: https://portfolio-url.faishalkc.eu.org/
+* Portfolio: https://portfolio.faishalkc.eu.org/
 
 ## License
 
