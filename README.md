@@ -1,20 +1,59 @@
-<div align="center">
-<img width="1200" height="475" alt="GHBanner" src="https://ai.google.dev/static/site-assets/images/share-ais-513315318.png" />
-</div>
+# Portfolio Website
 
-# Run and deploy your AI Studio app
+Personal portfolio website of **Muhammad Faishal Hady**.
 
-This contains everything you need to run your app locally.
+This website showcases my projects, certifications, technical skills, and experiences in software development, Internet of Things (IoT), data processing, and web technologies.
 
-View your app in AI Studio: https://ai.studio/apps/ff457d6f-8765-4581-8b2d-2b4f48940a58
+## Features
 
-## Run Locally
+* Responsive modern portfolio design
+* Project showcase with detailed descriptions
+* Professional certifications timeline
+* Technical skills presentation
+* Bilingual content (Indonesian & English)
+* Fast and lightweight user experience
 
-**Prerequisites:**  Node.js
+## Technologies Used
 
+* React
+* TypeScript
+* Vite
+* HTML5
+* CSS3
 
-1. Install dependencies:
-   `npm install`
-2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
-3. Run the app:
-   `npm run dev`
+## Getting Started
+
+Clone the repository:
+
+```bash
+git clone https://github.com/your-username/Portfolio.git
+```
+
+Install dependencies:
+
+```bash
+npm install
+```
+
+Run development server:
+
+```bash
+npm run dev
+```
+
+Build for production:
+
+```bash
+npm run build
+```
+
+## Author
+
+Muhammad Faishal Hady
+
+* GitHub: https://github.com/faishalkc/
+* Portfolio: https://portfolio-url.faishalkc.eu.org/
+
+## License
+
+This project is available for educational and personal reference purposes.
