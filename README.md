@@ -1,6 +1,6 @@
 # Personal Portfolio Website
 
-A modern and responsive personal portfolio website built using **React**, **TypeScript**, and **Vite**.
+A modern and responsive personal portfolio website built using **React**, **Vite**, and **Tailwind CSS**.
 
 This website serves as a central place to showcase my professional profile, technical skills, project portfolio, certifications, and experience in software engineering, web development, networking, Internet of Things (IoT), and data processing.
 
@@ -31,7 +31,7 @@ https://portfolio.faishalkc.eu.org/
 ### Frontend
 
 - React 19
-- TypeScript
+- JavaScript (ES6+)
 - Vite
 - HTML5
 - CSS3
@@ -50,17 +50,17 @@ https://portfolio.faishalkc.eu.org/
 ```
 src/
 ├── components/
-│   ├── About
-│   ├── Experience
-│   ├── Hero
-│   ├── Mascot
-│   ├── Navbar
-│   ├── Projects
-│   ├── Services
-│   └── Skills
-├── data.tsx
-├── App.tsx
-└── main.tsx
+│   ├── About.jsx
+│   ├── Experience.jsx
+│   ├── Hero.jsx
+│   ├── Mascot.jsx
+│   ├── Navbar.jsx
+│   ├── Projects.jsx
+│   ├── Services.jsx
+│   └── Skills.jsx
+├── data.jsx
+├── App.jsx
+└── main.jsx
 ```
 
 ---
