@@ -7,6 +7,8 @@
   --color-brand-purple: #bba0c9;
   --color-brand-purple-dark: #bba0c9;
   --color-brand-purple-light: #e2d4ea;
+  --color-segawa-plum: #8D5389;
+  --color-segawa-plum-light: #D7BBDC;
 }
 
 @variant dark (&:where(.dark, .dark *));

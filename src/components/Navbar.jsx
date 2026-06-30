@@ -10,19 +10,12 @@ import {
   Moon
 } from "lucide-react";
 
-interface NavbarProps {
-  darkMode: boolean;
-  setDarkMode: (dark: boolean) => void;
-  activeSection: string;
-  scrollToSection: (id: string) => void;
-}
-
 export default function Navbar({
   darkMode,
   setDarkMode,
   activeSection,
   scrollToSection
-}: NavbarProps) {
+}) {
   const navItems = [
     { id: "home", label: "Home", icon: <Home className="size-6" /> },
     { id: "about", label: "About", icon: <User className="size-6" /> },

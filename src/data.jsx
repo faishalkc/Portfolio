@@ -1,16 +1,15 @@
 import React from "react";
 import { Icon } from "@iconify/react";
-import { Project, ExperienceItem, SkillCategory } from "./types";
 
-export const mascotSpeeches: string[] = [
+export const mascotSpeeches = [
   "Halo! Selamat datang di portofolio saya! Saya Faishal, senang berkenalan dengan Anda! 🐙✨",
   "Portofolio ini dibangun menggunakan React & Tailwind CSS v4! 💻",
   "Saya berbasis di Pontianak, Indonesia. Mari kita berkolaborasi! 🌏🚀",
   "Butuh IT Support handal, Fullstack Web Engineer, atau Network Engineer? Kontak saya saja! 🛠️",
-  "Takodachi power! Semoga hari Anda dipenuhi kebahagiaan dan produktivitas! 🌟"
+  "Segawa Onpu power! Semoga hari Anda dipenuhi kebahagiaan dan produktivitas! 🌟"
 ];
 
-export const skillCategories: SkillCategory[] = [
+export const skillCategories = [
   {
     title: "Proficient In",
     delay: "0.0s",
@@ -98,7 +97,7 @@ export const skillCategories: SkillCategory[] = [
   }
 ];
 
-export const experienceData: ExperienceItem[] = [
+export const experienceData = [
   {
     period: "2024",
     role: "Full-Stack Web Developer",
@@ -123,7 +122,7 @@ export const experienceData: ExperienceItem[] = [
   }
 ];
 
-export const projectsData: Project[] = [
+export const projectsData = [
   {
     id: 1,
     title: "Sistem Pemantauan Gas Metana Dengan Protokol CoAP",

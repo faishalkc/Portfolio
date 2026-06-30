@@ -10,7 +10,7 @@ import Mascot from "./components/Mascot";
 
 export default function App() {
   // Theme state
-  const [darkMode, setDarkMode] = useState<boolean>(() => {
+  const [darkMode, setDarkMode] = useState(() => {
     if (typeof window !== "undefined") {
       const savedTheme = localStorage.getItem("theme");
       if (savedTheme) return savedTheme === "dark";
@@ -20,7 +20,7 @@ export default function App() {
   });
 
   // Navigation and scroll tracking
-  const [activeSection, setActiveSection] = useState<string>("home");
+  const [activeSection, setActiveSection] = useState("home");
 
   // Sync theme with document class
   useEffect(() => {
@@ -79,7 +79,7 @@ export default function App() {
     };
   }, []);
 
-  const scrollToSection = (id: string) => {
+  const scrollToSection = (id) => {
     const el = document.getElementById(id);
     if (el) {
       el.scrollIntoView({ behavior: "smooth", block: "start" });
@@ -92,7 +92,7 @@ export default function App() {
       
       {/* BACKGROUND TEXTURE */}
       <img
-        src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiJLKEHwo5ojJJTNwXL1ic49arulN7rOBb2hEhjhwNTtJVs-xzyoQCTQjimhNxPdW_X9qPdMDdm-LyhkyS1roRfHC8EsovWhYgLtayHQnWSYi86tLd57ovf4S5vEb0zdN3T-y3M48knBe1QNOUzqxSkTfZxRKswKEe0nE8tUDqTkxQI2Uqdx1hllH_U7KI/s1600/inabg.png"
+        src="/background.png"
         loading="lazy"
         aria-hidden="true"
         className="fixed inset-0 w-full h-full object-cover z-0 pointer-events-none opacity-[0.03] dark:opacity-[0.02]"

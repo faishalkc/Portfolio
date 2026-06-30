@@ -21,7 +21,7 @@ export default function Hero() {
             Halo, I'm Muhammad Faishal Hady!
           </h1>
           
-          <h2 className="text-lg md:text-xl font-medium text-brand-purple-dark dark:text-brand-purple mb-6 scroll-animate is-visible" style={{ transitionDelay: "0.2s" }}>
+          <h2 className="text-lg md:text-xl font-medium text-segawa-plum dark:text-segawa-plum-light mb-6 scroll-animate is-visible" style={{ transitionDelay: "0.2s" }}>
             IT Support | Fullstack Web Engineer | Network Engineer
           </h2>
           

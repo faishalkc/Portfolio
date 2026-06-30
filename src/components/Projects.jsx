@@ -3,7 +3,7 @@ import { Folder, ExternalLink } from "lucide-react";
 import { projectsData } from "../data";
 
 export default function Projects() {
-  const [showProjects, setShowProjects] = useState<boolean>(false);
+  const [showProjects, setShowProjects] = useState(false);
 
   return (
     <section id="projects" className="py-16 max-w-5xl mx-auto overflow-hidden">
@@ -33,7 +33,7 @@ export default function Projects() {
             >
               <div className="h-44 w-full overflow-hidden bg-gray-100 dark:bg-gray-900 relative">
                 <img
-                  src={project.image || "https://media.istockphoto.com/id/520129278/id/foto/kucing-lucu-terbang-di-langit.jpg?s=1024x1024&w=is&k=20&c=ygwy0txC6Z4SZIXZV9dwo9JzaGRR3GUm2eI-1wa90rI="}
+                  src={project.image || "/projects/no-picture.jpg"}
                   alt={project.title}
                   className="w-full h-full object-cover transition-transform duration-300 hover:scale-105"
                   referrerPolicy="no-referrer"
