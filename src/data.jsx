@@ -124,31 +124,41 @@ export const experienceData = [
 
 export const projectsData = [
   {
-    id: 1,
+    id: 8,
+    title: "Aplikasi Kalkulator Multiplatform",
+    category: "Desktop & Mobile Application",
+    description: "Aplikasi kalkulator yang dibangun dengan berbasis web untuk kebutuhan multiplatform, dapat berjalan pada sistem operasi Windows dan Android.",
+    tags: ["Electron", "Flutter", "WebView", "HTML", "CSS", "Javascript"],
+    metrics: "2026",
+    link: "https://github.com/faishalkc/Calculator-App",
+    image: "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiEEr6BEOpgGsprCMPiM_rM6Vm58Uuj3RbkFTxpFtDydNSvxSH1vsyHCQ3uKJ89FHVoA4PLOBcBRZNSrFw71TD6oMMAiBGEwdqmpSE_w4zP1D-LqzYdNHHMwtAa-yiimXvyXhVOof6z5PDef2Tpr6AZUqjCBUQjm8LUjAOP_eC-49QqCvtwbdbrTQ58kS8/s600/177436.png"
+  },
+  {
+    id: 7,
     title: "Sistem Pemantauan Gas Metana Dengan Protokol CoAP",
     category: "IoT & Web Engineering",
     description: "Situs pemantauan gas metana pada lahan gambut di Desa Sepuk Laut terintegrasi IoT dengan pengiriman data hemat daya via protokol CoAP.",
-    tags: ["Arduino IDE", "C++", "PHP", "MySQL", "Bootstrap", "HTML", "CSS"],
+    tags: ["Arduino IDE", "C++", "PHP", "MySQL", "Bootstrap", "HTML", "CSS", "Javascript"],
     metrics: "2025",
     link: "https://github.com/faishalkc/Pemantauan-Gas-Metana",
     image: "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgkcajdR6bur9VSw4TGC_-feuZgWKAAdpyVYlRlEtj5QvZ-N3QubDBHYTbIxeQiUKqygSZwjUOlw7nKhfayuclvYC24zcBGit6KvYAojL4tv_yMdBLsSxQoPK5SIqXgbpgwd82TH2pcEUtf2oN8uSqbAZAGDJ97B5ctrblISDt60P0-M7KAot7Jqb2pWMY/s600/ChatGPT%20Image%2030%20Jun%202026,%2018.05.05.png"
   },
   {
-    id: 2,
+    id: 6,
     title: "Sistem Informasi Desa Punggur Kecil",
     category: "Fullstack Web Engineering",
     description: "Sistem informasi pelayanan administrasi dan transparansi data publik berbasis web untuk warga Desa Punggur Kecil.",
-    tags: ["PHP", "MySQL", "Bootstrap", "HTML", "CSS"],
+    tags: ["PHP", "MySQL", "Bootstrap", "HTML", "CSS", "Javascript"],
     metrics: "2024",
     link: "https://github.com/faishalkc/Sistem-Informasi-Desa",
     image: "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEh23PDqnZSMv2-ReEWKHXyxnxdoHU7Dh0cFzfxzobK-R7kq733XqLvYMxtsYsLQCbQmCwFvDRwNmCVIsY-FSCtalkg4N485gKDyK2zB0hR3YydrUt_3SBB_IbQYXVbYrHRXoAi85pDM90U7i0-5XJqMeGSAn-JgIsg9utNDPDdSI17XtSevvlOYYQWXTBQ/s600/176404.png"
   },
   {
-    id: 3,
+    id: 5,
     title: "Sistem Monitoring Gas dan Suhu Buah Pisang",
     category: "IoT & Web Engineering",
     description: "Situs monitoring gas dan suhu buah pisang berbasis internet of things terhubung ke wadah tertutup dilengkapi sensor gas dan suhu.",
-    tags: ["Arduino IDE", "C++", "PHP", "MySQL", "Bootstrap", "HTML", "CSS"],
+    tags: ["Arduino IDE", "C++", "PHP", "MySQL", "Bootstrap", "HTML", "CSS", "Javascript"],
     metrics: "2023",
     link: "https://github.com/faishalkc/Monitoring-Pisang",
     image: "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEi6uKesU6dTiifFLrS5wzHtZSPVcVna1KBT96gdp6kYl4Qi-Upr2wHTgvw8HzF9RmqwpakDMVAmIqwljhWEKUU_Qu-NmZvH6CgS5jRY-6JHzGlO3pXkmT8qBKysZwtbH64FstHJgmkXiiw9f7kaND7EEdsMD_cjEXo3ocdgF9bzQMFpqJvwNTRGZicGXJY/s600/176390.png"
@@ -164,7 +174,7 @@ export const projectsData = [
     image: "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiNiw-0b-SSjazq4RHFksX7NM4SLPVrYS-6JlLDfq4dvQBmlsr8sbFtWzhFmfNC8dPvdDoByIYiOQWxKimuM8YXCJQgStyPgSiHNJaDRK-1nlQqBfTShpLOwlaB_CCRmSag4E_0h8FYmysHXPzsQ64QvmDGtZIXkSBM7khdW-2My_7ZLjKCAnNVbFb7Cik/s600/ChatGPT%20Image%2029%20Jun%202026,%2020.10.30.png"
   },
   {
-    id: 5,
+    id: 3,
     title: "Quiz Mobile App",
     category: "Mobile App Development",
     description: "Aplikasi kuis mobile interaktif dengan fitur pengacakan soal (randomizer) dan otentikasi akun (login/register).",
@@ -174,7 +184,7 @@ export const projectsData = [
     image: "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEikXx9Nz55Huv-W28hQsCYXhaWarxHMIH_jXSKdxvs5J-_VJVQxjPk2bFmZUmb_6dzQfZUQKMp1MK8BRcyR747zf_5faP3zPLNG6_uCJer4qrcx7iAU9rOO8efixS_PPbQFOH1JpBYv463d8sPaHdWhsIT6mMM11dtD_pI23K5Tv7stA_B9Qgq8mDmBkIg/s600/ChatGPT%20Image%2029%20Jun%202026,%2019.58.18.png"
   },
   {
-    id: 6,
+    id: 2,
     title: "Covid-19 Tracker",
     category: "Desktop Application",
     description: "Aplikasi desktop pemantau data pasien aktif, sembuh, dan meninggal akibat Covid-19 dari berbagai wilayah di dunia menggunakan API publik.",
@@ -184,7 +194,7 @@ export const projectsData = [
     image: "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhz7YVWt9JHm-f4KbkYauga2wdcq2crtPQfixXGgWoOrXbbMs1mAZVdisTCjpYjxBCn9QWIy_rSm4kEuDpzgKJeZ3qV5OsnE7k78OLrVjoCZxOM61EG9jpyUCLhOZCOaClBamUyehaXQ4AS_vwF2JS8x3Qe5HqZh35X0HB4fOw973b7I6zixwcjX7mwXfY/s600/ChatGPT%20Image%2029%20Jun%202026,%2019.39.53.png"
   },
   {
-    id: 7,
+    id: 1,
     title: "Coffee Toffee Landing Page",
     category: "Frontend Development",
     description: "Halaman pendarat responsif dengan visual menarik untuk memperkenalkan franchise Coffee Toffee, menu, galeri foto, dan kontak.",
