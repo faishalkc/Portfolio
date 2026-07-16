@@ -4,15 +4,15 @@ import { skillCategories } from "../data";
 export default function Skills() {
   return (
     <section id="skills" className="py-16 max-w-5xl mx-auto">
-      <h2 className="text-3xl font-bold text-center mb-12 text-gray-900 dark:text-white scroll-animate is-visible">
+      <h2 className="text-3xl font-bold text-center mb-12 text-gray-900 dark:text-white scroll-animate">
         Skill Set
       </h2>
-      
+
       <div className="space-y-8">
         {skillCategories.map((cat, idx) => (
           <div
             key={idx}
-            className="flex flex-col md:flex-row md:items-start gap-4 md:gap-8 scroll-animate is-visible"
+            className="flex flex-col md:flex-row md:items-start gap-4 md:gap-8 scroll-animate"
             style={{ transitionDelay: cat.delay }}
           >
             <div className="md:w-48 shrink-0">

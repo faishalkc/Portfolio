@@ -9,7 +9,7 @@ export default function Projects() {
 
   return (
     <section id="projects" className="py-16 max-w-5xl mx-auto overflow-hidden">
-      <div className="mx-auto max-w-2xl text-center mb-10">
+      <div className="mx-auto max-w-2xl text-center mb-10 scroll-animate">
         <h2 className="text-3xl font-bold tracking-tight text-gray-900 dark:text-white sm:text-4xl">
           Projects
         </h2>

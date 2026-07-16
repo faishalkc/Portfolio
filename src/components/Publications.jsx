@@ -8,7 +8,7 @@ export default function Publications() {
       id="publications"
       className="py-16 max-w-5xl mx-auto overflow-hidden"
     >
-      <h2 className="text-3xl font-bold text-center mb-12 text-gray-900 dark:text-white">
+      <h2 className="text-3xl font-bold text-center mb-12 text-gray-900 dark:text-white scroll-animate">
         Publications
       </h2>
 
@@ -16,7 +16,7 @@ export default function Publications() {
         {publicationsData.map((pub) => (
           <article
             key={pub.id}
-            className="grid gap-8 rounded-2xl border border-gray-100 bg-white/80 dark:bg-gray-900/60 p-5 shadow-sm sm:p-6 lg:grid-cols-[1.25fr_0.75fr] lg:p-8 dark:border-gray-800 transition-colors duration-300"
+            className="scroll-animate grid gap-8 rounded-2xl border border-gray-100 bg-white/80 dark:bg-gray-900/60 p-5 shadow-sm sm:p-6 lg:grid-cols-[1.25fr_0.75fr] lg:p-8 dark:border-gray-800 transition-colors duration-300"
           >
             <div className="flex flex-col">
               {/* Tags */}
