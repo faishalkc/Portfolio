@@ -5,6 +5,7 @@ import About from "./components/About";
 import Services from "./components/Services";
 import Skills from "./components/Skills";
 import Experience from "./components/Experience";
+import Publications from "./components/Publications";
 import Projects from "./components/Projects";
 import Mascot from "./components/Mascot";
 
@@ -43,6 +44,7 @@ export default function App() {
       "services",
       "skills",
       "experience",
+      "publications",
       "projects",
     ];
 
@@ -146,6 +148,9 @@ export default function App() {
 
         {/* EXPERIENCE SECTION */}
         <Experience />
+
+        {/* PUBLICATIONS SECTION */}
+        <Publications />
 
         {/* PROJECTS SECTION */}
         <Projects />

@@ -279,9 +279,9 @@ export const experienceData = [
     company: "Balai Desa Punggur Kecil",
     location: "Kubu Raya, Indonesia",
     tasks: [
-      "Mengembangkan situs web Sistem Informasi Desa untuk Punggur Kecil guna mendukung digitalisasi layanan publik desa dan meningkatkan akses masyarakat terhadap informasi.",
-      "Menyediakan fitur-fitur seperti profil desa, pembaruan berita, pengumuman, dan informasi masyarakat dengan antarmuka yang ramah pengguna.",
-      "Membantu meningkatkan transparansi dan komunikasi melalui pengelolaan data desa yang terstruktur bagi pejabat desa dan warga.",
+      "Developed a Village Information System website for Punggur Kecil to support the digitalization of village public services and improve community access to information.",
+      "Provided features such as village profiles, news updates, announcements, and community information with a user-friendly interface.",
+      "Helped improve transparency and communication through structured village data management for village officials and citizens.",
     ],
   },
 ];
@@ -289,10 +289,10 @@ export const experienceData = [
 export const projectsData = [
   {
     id: 8,
-    title: "Aplikasi Kalkulator Multiplatform",
+    title: "Multiplatform Calculator Application",
     category: "Desktop & Mobile Application",
     description:
-      "Aplikasi kalkulator yang dibangun dengan berbasis web untuk kebutuhan multiplatform, dapat berjalan pada sistem operasi Windows dan Android.",
+      "A web-based calculator application built for multiplatform needs, capable of running on Windows and Android operating systems.",
     tags: ["Electron", "Flutter", "WebView", "HTML", "CSS", "Javascript"],
     metrics: "2026",
     link: "https://github.com/faishalkc/Calculator-App",
@@ -301,10 +301,10 @@ export const projectsData = [
   },
   {
     id: 7,
-    title: "Sistem Pemantauan Gas Metana Dengan Protokol CoAP",
+    title: "Methane Gas Monitoring System using CoAP Protocol",
     category: "IoT & Web Engineering",
     description:
-      "Situs pemantauan gas metana pada lahan gambut di Desa Sepuk Laut terintegrasi IoT dengan pengiriman data hemat daya via protokol CoAP.",
+      "An IoT-integrated methane gas monitoring website for peatlands in Sepuk Laut Village with energy-efficient data transmission via the CoAP protocol.",
     tags: [
       "Arduino IDE",
       "C++",
@@ -322,10 +322,10 @@ export const projectsData = [
   },
   {
     id: 6,
-    title: "Sistem Informasi Desa Punggur Kecil",
+    title: "Punggur Kecil Village Information System",
     category: "Fullstack Web Engineering",
     description:
-      "Sistem informasi pelayanan administrasi dan transparansi data publik berbasis web untuk warga Desa Punggur Kecil.",
+      "A web-based administrative service and public data transparency information system for the residents of Punggur Kecil Village.",
     tags: ["PHP", "MySQL", "Bootstrap", "HTML", "CSS", "Javascript"],
     metrics: "2024",
     link: "https://github.com/faishalkc/Sistem-Informasi-Desa",
@@ -334,10 +334,10 @@ export const projectsData = [
   },
   {
     id: 5,
-    title: "Sistem Monitoring Gas dan Suhu Buah Pisang",
+    title: "Banana Gas and Temperature Monitoring System",
     category: "IoT & Web Engineering",
     description:
-      "Situs monitoring gas dan suhu buah pisang berbasis internet of things terhubung ke wadah tertutup dilengkapi sensor gas dan suhu.",
+      "An Internet of Things-based banana gas and temperature monitoring website connected to a sealed container equipped with gas and temperature sensors.",
     tags: [
       "Arduino IDE",
       "C++",
@@ -355,10 +355,10 @@ export const projectsData = [
   },
   {
     id: 4,
-    title: "Tokopedia Product Web Scraping",
+    title: "Tokopedia Product Web Scraper",
     category: "Fullstack Web Engineering",
     description:
-      "Aplikasi penarik data produk Tokopedia secara bulk dalam bentuk file Excel berdasarkan keyword, lengkap dengan filter kustom dan tautan produk otomatis.",
+      "A bulk product data scraper application for Tokopedia that extracts data into Excel files based on keywords, complete with custom filters and automatic product links.",
     tags: ["Python", "BeautifulSoup", "WebDriver"],
     metrics: "2023",
     link: "https://github.com/faishalkc/Tokopedia-Scraping",
@@ -370,7 +370,7 @@ export const projectsData = [
     title: "Quiz Mobile App",
     category: "Mobile App Development",
     description:
-      "Aplikasi kuis mobile interaktif dengan fitur pengacakan soal (randomizer) dan otentikasi akun (login/register).",
+      "An interactive mobile quiz application featuring question randomization (randomizer) and user account authentication (login/register).",
     tags: ["Flutter", "Firebase", "MySQL"],
     metrics: "2023",
     link: "https://github.com/faishalkc/Quiz-Mobile",
@@ -382,7 +382,7 @@ export const projectsData = [
     title: "Covid-19 Tracker",
     category: "Desktop Application",
     description:
-      "Aplikasi desktop pemantau data pasien aktif, sembuh, dan meninggal akibat Covid-19 dari berbagai wilayah di dunia menggunakan API publik.",
+      "A desktop application to monitor active, recovered, and deceased patient data from Covid-19 across various regions in the world using a public API.",
     tags: ["Python", "Tkinter", "BeautifulSoup"],
     metrics: "2022",
     link: "https://github.com/faishalkc/Covid-Tracker",
@@ -394,11 +394,50 @@ export const projectsData = [
     title: "Coffee Toffee Landing Page",
     category: "Frontend Development",
     description:
-      "Halaman pendarat responsif dengan visual menarik untuk memperkenalkan franchise Coffee Toffee, menu, galeri foto, dan kontak.",
+      "A responsive landing page with engaging visuals to introduce the Coffee Toffee franchise, menu, photo gallery, and contact information.",
     tags: ["HTML", "CSS", "Bootstrap"],
     metrics: "2022",
     link: "https://github.com/faishalkc/Coffee-Toffe",
     image:
       "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEi64OO_O1sUmCZ3B00cJ37gqPI_ZX3fwImdFVO50K2pTlo4byn0PgU7ENzA37kMsgY6Y0f9AtXrHq1yg2G4MnKVPx7U-HLtdYo6Wr_7HgZuRmDStjGeaiblkKOrrUFXvIw4rziq-6c1QR2T5_85DQCceJ2lBqMIkE0f6fA-TL6jwGbm2Fx1vaG2PNO-NTk/s600/ChatGPT%20Image%2029%20Jun%202026,%2020.03.15.png",
+  },
+];
+
+export const publicationsData = [
+  {
+    id: 1,
+    title:
+      "Implementation of CoAP Protocol in Web-Based Methane Gas Leakage Monitoring System",
+    journal: "Jurnal Fokus Elektroda",
+    period: "Vol. 11 No. 1, Published 28 February 2026",
+    authors: "Muhammad Faishal Hady, Syamsul Bahri, Dwi Marisa Midyanti",
+    doi: "10.33772/jfe.v11i1.1111",
+    doiUrl: "https://doi.org/10.33772/jfe.v11i1.1111",
+    paperUrl: "https://elektroda.uho.ac.id/index.php/journal/article/view/1111",
+    description:
+      "This study implements a methane gas (CH₄) leakage monitoring system on peatlands using the IoT-based Constrained Application Protocol (CoAP). The system utilizes a NodeMCU ESP8266 as a CoAP Client and an MQ-5 sensor to detect gas concentrations in real-time with low power consumption and high bandwidth efficiency.",
+    tags: ["CoAP", "IoT", "MQ-5 Sensor", "QoS Analysis", "Energy Efficiency"],
+    stats: [
+      {
+        label: "Average Delay",
+        value: "2.29 ms",
+        desc: "Very Good based on TIPHON standards",
+      },
+      {
+        label: "Throughput",
+        value: "55.54 kbps",
+        desc: "Stable and efficient small data transmission",
+      },
+      {
+        label: "Battery Life",
+        value: "37.8 Hours",
+        desc: "Continuous operation with a 10,000 mAh powerbank",
+      },
+      {
+        label: "Hardware",
+        value: "ESP8266 & MQ-5",
+        desc: "NodeMCU as CoAP Client & gas sensor",
+      },
+    ],
   },
 ];
