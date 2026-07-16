@@ -274,10 +274,10 @@ export const skillCategories = [
 
 export const experienceData = [
   {
-    period: "2024",
-    role: "Full-Stack Web Developer",
-    company: "Sistem Informasi Desa Punggur Kecil",
-    location: "Pontianak, Indonesia",
+    period: "Jun 2024 - Jul 2024",
+    role: "Full-Stack Web Developer (Intern)",
+    company: "Balai Desa Punggur Kecil",
+    location: "Kubu Raya, Indonesia",
     tasks: [
       "Mengembangkan situs web Sistem Informasi Desa untuk Punggur Kecil guna mendukung digitalisasi layanan publik desa dan meningkatkan akses masyarakat terhadap informasi.",
       "Menyediakan fitur-fitur seperti profil desa, pembaruan berita, pengumuman, dan informasi masyarakat dengan antarmuka yang ramah pengguna.",
