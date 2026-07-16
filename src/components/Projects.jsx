@@ -121,7 +121,7 @@ export default function Projects() {
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
               onClick={() => setActiveImage(null)}
-              className="absolute inset-0 bg-black/85 backdrop-blur-md cursor-zoom-out"
+              className="absolute inset-0 bg-black/85 backdrop-blur-md cursor-pointer"
             />
 
             {/* Modal Content */}
