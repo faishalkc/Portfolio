@@ -33,7 +33,15 @@ export default function Projects() {
               key={project.id}
               className="rounded-lg bg-white dark:bg-gray-800 border border-gray-100 dark:border-gray-800 overflow-hidden flex flex-col justify-between shadow-sm hover:shadow-md transition-shadow duration-300"
             >
-              <div className="aspect-video w-full overflow-hidden bg-gray-100 dark:bg-gray-900 relative group">
+              <div
+                onClick={() =>
+                  setActiveImage({
+                    src: project.image || "/projects/no-picture.jpg",
+                    title: project.title,
+                  })
+                }
+                className="aspect-video w-full overflow-hidden bg-gray-100 dark:bg-gray-900 relative group cursor-pointer"
+              >
                 <img
                   src={project.image || "/projects/no-picture.jpg"}
                   alt={project.title}
@@ -42,19 +50,10 @@ export default function Projects() {
                 />
 
                 {/* Hover Preview Button */}
-                <button
-                  type="button"
-                  onClick={() =>
-                    setActiveImage({
-                      src: project.image || "/projects/no-picture.jpg",
-                      title: project.title,
-                    })
-                  }
-                  className="absolute top-3 right-3 z-10 flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-slate-900/80 hover:bg-slate-900 text-white text-[11px] font-semibold tracking-wide shadow-md opacity-0 group-hover:opacity-100 transition-all duration-300 border border-white/10 backdrop-blur-xs transform translate-y-1 group-hover:translate-y-0 cursor-pointer"
-                >
+                <div className="absolute top-3 right-3 z-10 flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-slate-900/80 hover:bg-slate-900 text-white text-[11px] font-semibold tracking-wide shadow-md opacity-0 group-hover:opacity-100 transition-all duration-300 border border-white/10 backdrop-blur-xs transform translate-y-1 group-hover:translate-y-0 cursor-pointer">
                   <Eye className="size-3.5" />
                   Preview
-                </button>
+                </div>
               </div>
 
               <div className="p-6 flex-1 flex flex-col justify-between">
