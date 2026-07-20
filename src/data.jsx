@@ -416,7 +416,7 @@ export const publicationsData = [
     paperUrl: "https://elektroda.uho.ac.id/index.php/journal/article/view/1111",
     description:
       "This study implements a methane gas (CH₄) leakage monitoring system on peatlands using the IoT-based Constrained Application Protocol (CoAP). The system utilizes a NodeMCU ESP8266 as a CoAP Client and an MQ-5 sensor to detect gas concentrations in real-time with low power consumption and high bandwidth efficiency.",
-    tags: ["CoAP", "IoT", "MQ-5 Sensor", "QoS Analysis", "Energy Efficiency"],
+    tags: ["CoAP", "Power", "Delay", "Methane", "Throughput"],
     stats: [
       {
         label: "Average Delay",
