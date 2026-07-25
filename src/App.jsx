@@ -133,7 +133,7 @@ export default function App() {
       />
 
       {/* MAIN CONTAINER */}
-      <main className="relative max-w-6xl mx-auto px-4 md:pl-24 md:pr-0">
+      <main className="relative max-w-6xl min-w-[48rem] mx-8 md:mx-[max(32px,calc((100%-72rem)/2))] px-4 md:pl-24 md:pr-0">
         {/* HERO / HOME SECTION */}
         <Hero />
 
