@@ -38,16 +38,8 @@ export default function App() {
 
   // Scroll spy & Scroll Animation triggers
   useEffect(() => {
-    const sections = [
-      "home",
-      "about",
-      "services",
-      "skills",
-      "experience",
-      "publications",
-      "projects",
-    ];
-
+    const sections = ["home", "about", "services", "skills", "experience", "publications", "projects"];
+    
     const navObserver = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
@@ -56,7 +48,7 @@ export default function App() {
           }
         });
       },
-      { threshold: 0.15, rootMargin: "-20% 0px -20% 0px" },
+      { threshold: 0.15, rootMargin: "-20% 0px -20% 0px" }
     );
 
     const animObserver = new IntersectionObserver(
@@ -67,7 +59,7 @@ export default function App() {
           }
         });
       },
-      { threshold: 0.1 },
+      { threshold: 0.1 }
     );
 
     sections.forEach((id) => {
@@ -116,6 +108,7 @@ export default function App() {
 
   return (
     <div className="relative min-h-screen text-gray-900 bg-[#f4f6f9] dark:bg-gray-950 dark:text-white font-sans overflow-x-hidden transition-colors duration-300">
+      
       {/* BACKGROUND TEXTURE */}
       <img
         src="/background.png"
@@ -133,7 +126,8 @@ export default function App() {
       />
 
       {/* MAIN CONTAINER */}
-      <main className="relative max-w-6xl w-full mx-auto md:min-w-[48rem] md:mx-[max(32px,calc((100%-72rem)/2))] px-4 md:pl-24 md:pr-0">
+      <main className="relative w-full mx-auto max-w-6xl md:min-w-[48rem] md:max-w-[min(72rem,calc(100%-64px))] px-4 md:pl-24 md:pr-6">
+        
         {/* HERO / HOME SECTION */}
         <Hero />
 
@@ -154,10 +148,12 @@ export default function App() {
 
         {/* PROJECTS SECTION */}
         <Projects />
+
       </main>
 
       {/* FLOATING MASCOT BUTTON (TAKODACHI EASTER EGG) */}
       <Mascot />
+
     </div>
   );
 }
