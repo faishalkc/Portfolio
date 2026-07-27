@@ -110,7 +110,7 @@ export default function About() {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           <div>
             <h3 className="text-base font-bold text-gray-700 dark:text-gray-300 mb-3">
-              2026 — ITBox by Course-Net Indonesia
+              2026 — ITBox (from Course-Net Indonesia)
             </h3>
             <ul className="grid grid-cols-1 gap-2 text-sm md:text-base text-gray-600 dark:text-gray-300">
               <li className="flex items-center gap-1.5">
@@ -129,7 +129,7 @@ export default function About() {
           </div>
           <div>
             <h3 className="text-base font-bold text-gray-700 dark:text-gray-300 mb-3">
-              2024 — ITBox by Course-Net Indonesia
+              2024 — ITBox (from Course-Net Indonesia)
             </h3>
             <ul className="grid grid-cols-1 gap-2 text-sm md:text-base text-gray-600 dark:text-gray-300">
               <li className="flex items-center gap-1.5">
