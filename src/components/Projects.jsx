@@ -1,13 +1,5 @@
 import React, { useState } from "react";
-import {
-  Folder,
-  ExternalLink,
-  Eye,
-  X,
-  LayoutGrid,
-  Columns2,
-  List,
-} from "lucide-react";
+import { Folder, ExternalLink, Eye, X, LayoutGrid, Columns2, List } from "lucide-react";
 import { motion, AnimatePresence } from "motion/react";
 import { projectsData } from "../data";
 
@@ -25,7 +17,7 @@ export default function Projects() {
         <p className="mt-2 text-lg leading-8 text-gray-600 dark:text-gray-400 mb-8">
           Selected works and experiments
         </p>
-
+        
         <button
           type="button"
           onClick={() => setShowProjects(!showProjects)}
@@ -84,17 +76,15 @@ export default function Projects() {
               viewMode === "grid3"
                 ? "grid grid-cols-1 md:grid-cols-3 gap-6"
                 : viewMode === "grid2"
-                  ? "grid grid-cols-1 md:grid-cols-2 gap-6"
-                  : "flex flex-col gap-6"
+                ? "grid grid-cols-1 md:grid-cols-2 gap-6"
+                : "flex flex-col gap-6"
             }`}
           >
             {projectsData.map((project) => (
               <div
                 key={project.id}
                 className={`rounded-lg bg-white dark:bg-gray-800 border border-gray-100 dark:border-gray-800 overflow-hidden flex flex-col ${
-                  viewMode === "list"
-                    ? "md:flex-row md:items-stretch"
-                    : "justify-between"
+                  viewMode === "list" ? "md:flex-row md:items-stretch" : "justify-between"
                 } shadow-sm hover:shadow-md transition-all duration-300`}
               >
                 <div
@@ -105,9 +95,7 @@ export default function Projects() {
                     })
                   }
                   className={`${
-                    viewMode === "list"
-                      ? "md:w-80 md:aspect-video shrink-0"
-                      : "aspect-video w-full"
+                    viewMode === "list" ? "md:w-80 md:aspect-video shrink-0" : "aspect-video w-full"
                   } overflow-hidden bg-gray-100 dark:bg-gray-900 relative group cursor-pointer`}
                 >
                   <img
@@ -118,7 +106,9 @@ export default function Projects() {
                   />
 
                   {/* Hover Preview Button */}
-                  <div className="absolute top-3 right-3 z-10 flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-slate-900/80 hover:bg-slate-900 text-white text-[11px] font-semibold tracking-wide shadow-md opacity-0 group-hover:opacity-100 transition-all duration-300 border border-white/10 backdrop-blur-xs transform translate-y-1 group-hover:translate-y-0 cursor-pointer">
+                  <div
+                    className="absolute top-3 right-3 z-10 flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-slate-900/80 hover:bg-slate-900 text-white text-[11px] font-semibold tracking-wide shadow-md opacity-0 group-hover:opacity-100 transition-all duration-300 border border-white/10 backdrop-blur-xs transform translate-y-1 group-hover:translate-y-0 cursor-pointer"
+                  >
                     <Eye className="size-3.5" />
                     Preview
                   </div>
@@ -170,11 +160,9 @@ export default function Projects() {
                         Visit Project <ExternalLink className="size-3" />
                       </a>
                     ) : (
-                      <span
-                        className={`text-xs font-medium text-gray-400 italic block ${
-                          viewMode === "list" ? "md:text-left" : "text-center"
-                        }`}
-                      >
+                      <span className={`text-xs font-medium text-gray-400 italic block ${
+                        viewMode === "list" ? "md:text-left" : "text-center"
+                      }`}>
                         Internal Corporate / Research Stack
                       </span>
                     )}

@@ -8,31 +8,23 @@ import {
   BookOpen,
   Folder,
   Sun,
-  Moon,
+  Moon
 } from "lucide-react";
 
 export default function Navbar({
   darkMode,
   setDarkMode,
   activeSection,
-  scrollToSection,
+  scrollToSection
 }) {
   const navItems = [
     { id: "home", label: "Home", icon: <Home className="size-6" /> },
     { id: "about", label: "About", icon: <User className="size-6" /> },
     { id: "services", label: "Services", icon: <Layers className="size-6" /> },
     { id: "skills", label: "Skills", icon: <Wrench className="size-6" /> },
-    {
-      id: "experience",
-      label: "Experience",
-      icon: <Briefcase className="size-6" />,
-    },
-    {
-      id: "publications",
-      label: "Publications",
-      icon: <BookOpen className="size-6" />,
-    },
-    { id: "projects", label: "Projects", icon: <Folder className="size-6" /> },
+    { id: "experience", label: "Experience", icon: <Briefcase className="size-6" /> },
+    { id: "publications", label: "Publications", icon: <BookOpen className="size-6" /> },
+    { id: "projects", label: "Projects", icon: <Folder className="size-6" /> }
   ];
 
   const mobileNavItems = [
@@ -40,17 +32,9 @@ export default function Navbar({
     { id: "about", label: "About", icon: <User className="size-5" /> },
     { id: "services", label: "Services", icon: <Layers className="size-5" /> },
     { id: "skills", label: "Skills", icon: <Wrench className="size-5" /> },
-    {
-      id: "experience",
-      label: "Experience",
-      icon: <Briefcase className="size-5" />,
-    },
-    {
-      id: "publications",
-      label: "Publications",
-      icon: <BookOpen className="size-5" />,
-    },
-    { id: "projects", label: "Projects", icon: <Folder className="size-5" /> },
+    { id: "experience", label: "Experience", icon: <Briefcase className="size-5" /> },
+    { id: "publications", label: "Publications", icon: <BookOpen className="size-5" /> },
+    { id: "projects", label: "Projects", icon: <Folder className="size-5" /> }
   ];
 
   return (
@@ -87,11 +71,7 @@ export default function Navbar({
             title="Toggle theme"
             className="rounded-full p-2.5 text-gray-400 hover:text-gray-800 dark:hover:text-gray-200 transition-all duration-300 cursor-pointer"
           >
-            {darkMode ? (
-              <Sun className="size-6" />
-            ) : (
-              <Moon className="size-6" />
-            )}
+            {darkMode ? <Sun className="size-6" /> : <Moon className="size-6" />}
           </button>
         </nav>
       </header>
@@ -124,11 +104,7 @@ export default function Navbar({
             aria-label="Toggle color mode"
             className="rounded-md p-2 text-gray-400 hover:text-gray-700 dark:hover:text-gray-200 transition-all duration-300 shrink-0"
           >
-            {darkMode ? (
-              <Sun className="size-5" />
-            ) : (
-              <Moon className="size-5" />
-            )}
+            {darkMode ? <Sun className="size-5" /> : <Moon className="size-5" />}
           </button>
         </nav>
       </header>

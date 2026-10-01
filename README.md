@@ -1,144 +1,20 @@
-# Personal Portfolio Website
+<div align="center">
+<img width="1200" height="475" alt="GHBanner" src="https://ai.google.dev/static/site-assets/images/share-ais-513315318.png" />
+</div>
 
-A modern and responsive personal portfolio website built using **React**, **Vite**, and **Tailwind CSS**.
+# Run and deploy your AI Studio app
 
-This website serves as a central place to showcase my professional profile, technical skills, project portfolio, certifications, and experience in software engineering, web development, networking, Internet of Things (IoT), and data processing.
+This contains everything you need to run your app locally.
 
-## 🌐 Live Demo
+View your app in AI Studio: https://ai.studio/apps/b8a7ff99-52b9-4519-80c4-f76ae552d489
 
-https://portfolio.faishalkc.eu.org/
+## Run Locally
 
----
+**Prerequisites:**  Node.js
 
-## ✨ Features
 
-- Responsive design for desktop, tablet, and mobile
-- Light & Dark mode
-- Smooth scrolling navigation
-- Animated page transitions
-- Interactive project showcase
-- Technical skills categorized by expertise
-- Professional experience timeline
-- Personal introduction section
-- Service overview
-- Floating mascot easter egg
-- Optimized for fast loading
-
----
-
-## 🛠 Technologies
-
-### Frontend
-
-- React 19
-- JavaScript (ES6+)
-- Vite
-- HTML5
-- CSS3
-- Tailwind CSS v4
-
-### Libraries
-
-- Iconify
-- Lucide React
-- Motion
-
----
-
-## 📂 Project Structure
-
-```
-src/
-├── components/
-│   ├── About.jsx
-│   ├── Experience.jsx
-│   ├── Hero.jsx
-│   ├── Mascot.jsx
-│   ├── Navbar.jsx
-│   ├── Projects.jsx
-│   ├── Services.jsx
-│   └── Skills.jsx
-├── data.jsx
-├── App.jsx
-└── main.jsx
-```
-
----
-
-## 🚀 Installation
-
-Clone this repository.
-
-```bash
-git clone https://github.com/faishalkc/Portfolio.git
-```
-
-Go into the project directory.
-
-```bash
-cd Portfolio
-```
-
-Install dependencies.
-
-```bash
-npm install
-```
-
-Start development server.
-
-```bash
-npm run dev
-```
-
-Build for production.
-
-```bash
-npm run build
-```
-
-Preview production build.
-
-```bash
-npm run preview
-```
-
----
-
-## 📱 Responsive
-
-The website is optimized for:
-
-- Desktop
-- Laptop
-- Tablet
-- Mobile devices
-
----
-
-## 🎯 Purpose
-
-The portfolio is designed to present my technical background and projects in a clean and professional format for:
-
-- Recruiters
-- Hiring Managers
-- Clients
-- Collaborators
-- Fellow Developers
-
----
-
-## 👨‍💻 Author
-
-**Muhammad Faishal Hady**
-
-- Portfolio: https://portfolio.faishalkc.eu.org/
-- GitHub: https://github.com/faishalkc
-
----
-
-## 📄 License
-
-This project is intended for personal portfolio and educational purposes.
-
-Feel free to explore the source code for learning and inspiration.
+1. Install dependencies:
+   `npm install`
+2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
+3. Run the app:
+   `npm run dev`

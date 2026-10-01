@@ -7,7 +7,7 @@ export default function Skills() {
       <h2 className="text-3xl font-bold text-center mb-12 text-gray-900 dark:text-white scroll-animate">
         Skill Set
       </h2>
-
+      
       <div className="space-y-8">
         {skillCategories.map((cat, idx) => (
           <div

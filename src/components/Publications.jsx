@@ -4,10 +4,7 @@ import { publicationsData } from "../data";
 
 export default function Publications() {
   return (
-    <section
-      id="publications"
-      className="py-16 max-w-5xl mx-auto overflow-hidden"
-    >
+    <section id="publications" className="py-16 max-w-5xl mx-auto overflow-hidden">
       <h2 className="text-3xl font-bold text-center mb-12 text-gray-900 dark:text-white scroll-animate">
         Publications
       </h2>
@@ -43,10 +40,7 @@ export default function Publications() {
                 </p>
                 <p>{pub.period}</p>
                 <p>
-                  Authors:{" "}
-                  <span className="text-gray-800 dark:text-gray-200">
-                    {pub.authors}
-                  </span>
+                  Authors: <span className="text-gray-800 dark:text-gray-200">{pub.authors}</span>
                 </p>
                 {pub.doi && (
                   <p className="flex items-center gap-1.5 flex-wrap">
@@ -120,3 +114,4 @@ export default function Publications() {
     </section>
   );
 }
+

@@ -406,38 +406,37 @@ export const projectsData = [
 export const publicationsData = [
   {
     id: 1,
-    title:
-      "Implementation of CoAP Protocol in Web-Based Methane Gas Leakage Monitoring System",
+    title: "Implementation of CoAP Protocol in Web-Based Methane Gas Leakage Monitoring System",
     journal: "Jurnal Fokus Elektroda",
     period: "Vol. 11 No. 1, Published 28 February 2026",
     authors: "Muhammad Faishal Hady, Syamsul Bahri, Dwi Marisa Midyanti",
     doi: "10.33772/jfe.v11i1.1111",
     doiUrl: "https://doi.org/10.33772/jfe.v11i1.1111",
     paperUrl: "https://elektroda.uho.ac.id/index.php/journal/article/view/1111",
-    description:
-      "This study implements a methane gas (CH₄) leakage monitoring system on peatlands using the IoT-based Constrained Application Protocol (CoAP). The system utilizes a NodeMCU ESP8266 as a CoAP Client and an MQ-5 sensor to detect gas concentrations in real-time with low power consumption and high bandwidth efficiency.",
-    tags: ["CoAP", "Power", "Delay", "Methane", "Throughput"],
+    description: "This study implements a methane gas (CH₄) leakage monitoring system on peatlands using the IoT-based Constrained Application Protocol (CoAP). The system utilizes a NodeMCU ESP8266 as a CoAP Client and an MQ-5 sensor to detect gas concentrations in real-time with low power consumption and high bandwidth efficiency.",
+    tags: ["CoAP", "IoT", "MQ-5 Sensor", "QoS Analysis", "Energy Efficiency"],
     stats: [
       {
         label: "Average Delay",
         value: "2.29 ms",
-        desc: "Very Good based on TIPHON standards",
+        desc: "Very Good based on TIPHON standards"
       },
       {
         label: "Throughput",
         value: "55.54 kbps",
-        desc: "Stable and efficient small data transmission",
+        desc: "Stable and efficient small data transmission"
       },
       {
         label: "Battery Life",
         value: "37.8 Hours",
-        desc: "Continuous operation with a 10,000 mAh powerbank",
+        desc: "Continuous operation with a 10,000 mAh powerbank"
       },
       {
         label: "Hardware",
         value: "ESP8266 & MQ-5",
-        desc: "NodeMCU as CoAP Client & gas sensor",
-      },
-    ],
-  },
+        desc: "NodeMCU as CoAP Client & gas sensor"
+      }
+    ]
+  }
 ];
+
