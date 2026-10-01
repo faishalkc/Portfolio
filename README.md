@@ -1,4 +1,4 @@
-# Personal Portfolio Website
+# Personal Portfolio
 
 A modern and responsive personal portfolio website built using **React**, **Vite**, and **Tailwind CSS**.
 
