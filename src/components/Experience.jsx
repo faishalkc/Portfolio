@@ -3,19 +3,22 @@ import { experienceData } from "../data";
 
 export default function Experience() {
   return (
-    <section id="experience" className="py-16 max-w-5xl mx-auto overflow-hidden">
+    <section id="experience" className="py-16 max-w-5xl mx-auto">
       <h2 className="text-3xl font-bold text-center mb-12 text-gray-900 dark:text-white scroll-animate">
         Experience
       </h2>
       
       <div className="flex gap-1.5 flex-col max-w-3xl mx-auto">
         {experienceData.map((exp, idx) => (
-          <div key={idx} className="group relative flex flex-1 gap-3 scroll-animate">
+          <div
+            key={idx}
+            className="group relative flex flex-1 gap-3 scroll-animate"
+          >
             
             {/* Timeline track */}
             <div className="relative flex items-center gap-1.5 flex-col">
               <span className="inline-flex items-center justify-center shrink-0 select-none rounded-full align-middle bg-gray-100 dark:bg-gray-800 size-8">
-                <div className="h-3 w-3 rounded-full bg-gray-400 dark:bg-gray-500 border-2 border-white dark:border-gray-900"></div>
+                <div className="h-3 w-3 rounded-full bg-purple-600 dark:bg-purple-400 border-2 border-white dark:border-gray-900 ring-2 ring-gray-100 dark:ring-gray-800"></div>
               </span>
               {idx < experienceData.length - 1 && (
                 <div role="separator" className="flex-1 rounded-full bg-gray-200 dark:bg-gray-700 w-0.5"></div>
@@ -37,7 +40,7 @@ export default function Experience() {
                 {exp.location}
               </div>
               
-              <ul className="space-y-1.5 text-gray-600 dark:text-gray-400 mt-3">
+              <ul className="space-y-1.5 text-sm text-gray-600 dark:text-gray-400 mt-3">
                 {exp.tasks.map((task, tIdx) => (
                   <li key={tIdx} className="flex items-start gap-2.5">
                     <span className="mt-2 size-1.5 rounded-full bg-gray-400 dark:bg-gray-500 shrink-0"></span>

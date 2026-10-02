@@ -6,25 +6,27 @@ import { projectsData } from "../data";
 export default function Projects() {
   const [showProjects, setShowProjects] = useState(false);
   const [activeImage, setActiveImage] = useState(null);
-  const [viewMode, setViewMode] = useState("list"); // "list", "grid3", "grid2"
+  const [viewMode, setViewMode] = useState("grid3"); // "grid3", "grid2", "list"
 
   return (
-    <section id="projects" className="py-16 max-w-5xl mx-auto overflow-hidden">
-      <div className="mx-auto max-w-2xl text-center mb-10 scroll-animate">
-        <h2 className="text-3xl font-bold tracking-tight text-gray-900 dark:text-white sm:text-4xl">
+    <section id="projects" className="py-16 max-w-5xl mx-auto">
+      <div className="mx-auto max-w-2xl text-center mb-10">
+        <h2 className="text-3xl font-bold tracking-tight text-gray-900 dark:text-white sm:text-4xl scroll-animate">
           Projects
         </h2>
-        <p className="mt-2 text-lg leading-8 text-gray-600 dark:text-gray-400 mb-8">
+        <p className="mt-2 text-lg leading-8 text-gray-600 dark:text-gray-400 mb-8 scroll-animate">
           Selected works and experiments
         </p>
         
-        <button
-          type="button"
-          onClick={() => setShowProjects(!showProjects)}
-          className="font-medium inline-flex items-center transition-colors py-2.5 text-sm gap-2 text-white bg-slate-900 dark:bg-slate-100 dark:text-slate-900 hover:bg-slate-800 dark:hover:bg-slate-200 px-6 rounded-full shadow-sm cursor-pointer"
-        >
-          <Folder className="size-5" /> What I've made
-        </button>
+        <div className="scroll-animate">
+          <button
+            type="button"
+            onClick={() => setShowProjects(!showProjects)}
+            className="font-medium inline-flex items-center transition-colors py-2.5 text-sm gap-2 text-white bg-slate-900 dark:bg-slate-100 dark:text-slate-900 hover:bg-slate-800 dark:hover:bg-slate-200 px-6 rounded-full shadow-sm cursor-pointer"
+          >
+            <Folder className="size-5" /> What I've made
+          </button>
+        </div>
       </div>
 
       {showProjects && (
@@ -34,18 +36,6 @@ export default function Projects() {
             <div className="inline-flex items-center gap-1 bg-white dark:bg-gray-800 p-1 rounded-full border border-gray-200/80 dark:border-gray-700 shadow-xs">
               <button
                 type="button"
-                onClick={() => setViewMode("list")}
-                className={`p-1.5 rounded-full transition-all cursor-pointer ${
-                  viewMode === "list"
-                    ? "bg-slate-900 text-white dark:bg-slate-100 dark:text-slate-900 shadow-sm"
-                    : "text-gray-400 dark:text-gray-500 hover:bg-gray-100 dark:hover:bg-gray-700/50 hover:text-gray-600 dark:hover:text-gray-300"
-                }`}
-                title="List View"
-              >
-                <List className="size-4" />
-              </button>
-              <button
-                type="button"
                 onClick={() => setViewMode("grid3")}
                 className={`p-1.5 rounded-full transition-all cursor-pointer ${
                   viewMode === "grid3"
@@ -53,6 +43,7 @@ export default function Projects() {
                     : "text-gray-400 dark:text-gray-500 hover:bg-gray-100 dark:hover:bg-gray-700/50 hover:text-gray-600 dark:hover:text-gray-300"
                 }`}
                 title="3 Columns"
+                aria-label="3 Columns View"
               >
                 <LayoutGrid className="size-4" />
               </button>
@@ -65,8 +56,22 @@ export default function Projects() {
                     : "text-gray-400 dark:text-gray-500 hover:bg-gray-100 dark:hover:bg-gray-700/50 hover:text-gray-600 dark:hover:text-gray-300"
                 }`}
                 title="2 Columns"
+                aria-label="2 Columns View"
               >
                 <Columns2 className="size-4" />
+              </button>
+              <button
+                type="button"
+                onClick={() => setViewMode("list")}
+                className={`p-1.5 rounded-full transition-all cursor-pointer ${
+                  viewMode === "list"
+                    ? "bg-slate-900 text-white dark:bg-slate-100 dark:text-slate-900 shadow-sm"
+                    : "text-gray-400 dark:text-gray-500 hover:bg-gray-100 dark:hover:bg-gray-700/50 hover:text-gray-600 dark:hover:text-gray-300"
+                }`}
+                title="List View"
+                aria-label="List View"
+              >
+                <List className="size-4" />
               </button>
             </div>
           </div>
@@ -80,12 +85,13 @@ export default function Projects() {
                 : "flex flex-col gap-6"
             }`}
           >
-            {projectsData.map((project) => (
+            {projectsData.map((project, idx) => (
               <div
                 key={project.id}
-                className={`rounded-lg bg-white dark:bg-gray-800 border border-gray-100 dark:border-gray-800 overflow-hidden flex flex-col ${
+                style={{ animationDelay: `${idx * 0.04}s`, animationFillMode: "both" }}
+                className={`animate-fadeIn rounded-lg bg-white dark:bg-gray-800 border border-gray-100 dark:border-gray-800 overflow-hidden flex flex-col ${
                   viewMode === "list" ? "md:flex-row md:items-stretch" : "justify-between"
-                } shadow-sm hover:shadow-md transition-all duration-300`}
+                } shadow-sm hover:shadow-md transition-shadow duration-300`}
               >
                 <div
                   onClick={() =>
@@ -117,7 +123,7 @@ export default function Projects() {
                 <div className="p-6 flex-1 flex flex-col justify-between">
                   <div>
                     <div className="flex items-center justify-between gap-2 mb-3">
-                      <span className="text-xs font-semibold text-gray-700 dark:text-gray-300 uppercase bg-black/5 dark:bg-white/5 px-2.5 py-1 rounded">
+                      <span className="text-xs font-semibold text-purple-700 dark:text-purple-300 uppercase tracking-wider bg-purple-50 dark:bg-purple-900/30 px-2.5 py-1 rounded">
                         {project.category}
                       </span>
                       {project.metrics && (
@@ -141,7 +147,7 @@ export default function Projects() {
                       {project.tags.map((tag, tIdx) => (
                         <span
                           key={tIdx}
-                          className="text-[10px] font-medium bg-gray-50 dark:bg-gray-900 text-gray-500 dark:text-gray-400 px-2 py-0.5 rounded border border-gray-100 dark:border-gray-800"
+                          className="text-xs font-medium bg-gray-50 dark:bg-gray-900 text-gray-500 dark:text-gray-400 px-2 py-0.5 rounded border border-gray-100 dark:border-gray-800"
                         >
                           {tag}
                         </span>

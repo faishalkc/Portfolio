@@ -13,7 +13,6 @@ export default function Skills() {
           <div
             key={idx}
             className="flex flex-col md:flex-row md:items-start gap-4 md:gap-8 scroll-animate"
-            style={{ transitionDelay: cat.delay }}
           >
             <div className="md:w-48 shrink-0">
               <h3 className="text-lg font-semibold text-gray-700 dark:text-gray-300 md:text-right pt-1.5">
@@ -25,7 +24,7 @@ export default function Skills() {
                 <button
                   key={sIdx}
                   type="button"
-                  className="inline-flex items-center text-sm gap-1.5 border border-gray-200 dark:border-gray-700 font-normal px-4 py-2 rounded-full bg-white dark:bg-gray-800 hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors duration-200"
+                  className="inline-flex items-center text-sm gap-1.5 border border-gray-200 dark:border-gray-700 font-normal px-4 py-2 rounded-full bg-white dark:bg-gray-800 hover:bg-gray-50 dark:hover:bg-gray-750 transition-colors duration-200"
                 >
                   {skill.icon}
                   <span className="truncate">{skill.label}</span>

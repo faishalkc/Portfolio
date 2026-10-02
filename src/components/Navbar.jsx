@@ -13,7 +13,7 @@ import {
 
 export default function Navbar({
   darkMode,
-  setDarkMode,
+  toggleDarkMode,
   activeSection,
   scrollToSection
 }) {
@@ -50,9 +50,9 @@ export default function Navbar({
                 onClick={() => scrollToSection(item.id)}
                 aria-label={item.label}
                 title={item.label}
-                className={`rounded-full p-2.5 transition-all duration-300 cursor-pointer ${
+                className={`w-11 h-11 flex items-center justify-center rounded-full transition-colors duration-200 cursor-pointer ${
                   activeSection === item.id
-                    ? "text-gray-900 dark:text-white bg-gray-100 dark:bg-gray-800 font-bold scale-110 shadow-sm"
+                    ? "text-purple-700 dark:text-purple-400 bg-gray-100 dark:bg-gray-800 font-semibold shadow-xs"
                     : "text-gray-400 hover:text-gray-700 dark:hover:text-gray-200"
                 }`}
               >
@@ -61,17 +61,21 @@ export default function Navbar({
             ))}
           </div>
 
-          <div className="w-8 h-px bg-gray-200 dark:bg-gray-700 my-4"></div>
+          <div className="w-8 h-px bg-gray-200 dark:bg-gray-700 my-3"></div>
 
           {/* Theme Toggle Button */}
           <button
             type="button"
-            onClick={() => setDarkMode(!darkMode)}
+            onClick={toggleDarkMode}
             aria-label="Toggle color mode"
-            title="Toggle theme"
-            className="rounded-full p-2.5 text-gray-400 hover:text-gray-800 dark:hover:text-gray-200 transition-all duration-300 cursor-pointer"
+            title={darkMode ? "Switch to light mode" : "Switch to dark mode"}
+            className="w-11 h-11 flex items-center justify-center rounded-full text-gray-400 hover:text-gray-800 dark:hover:text-gray-200 transition-colors duration-200 cursor-pointer"
           >
-            {darkMode ? <Sun className="size-6" /> : <Moon className="size-6" />}
+            {darkMode ? (
+              <Sun className="size-6 text-amber-400 shrink-0" />
+            ) : (
+              <Moon className="size-6 text-purple-600 dark:text-purple-400 shrink-0" />
+            )}
           </button>
         </nav>
       </header>
@@ -86,9 +90,9 @@ export default function Navbar({
                 type="button"
                 onClick={() => scrollToSection(item.id)}
                 aria-label={item.label}
-                className={`rounded-md p-2 transition-all duration-300 shrink-0 ${
+                className={`w-9 h-9 flex items-center justify-center rounded-full transition-colors duration-200 shrink-0 cursor-pointer ${
                   activeSection === item.id
-                    ? "text-gray-900 dark:text-white bg-gray-100 dark:bg-gray-800 font-medium scale-105"
+                    ? "text-purple-700 dark:text-purple-400 bg-gray-100 dark:bg-gray-800 font-semibold shadow-xs"
                     : "text-gray-400 hover:text-gray-700 dark:hover:text-gray-200"
                 }`}
               >
@@ -96,15 +100,20 @@ export default function Navbar({
               </button>
             ))}
           </div>
-          <div className="w-px h-6 bg-gray-200 dark:bg-gray-700 mx-2 sm:mx-2.5 shrink-0"></div>
+          <div className="w-px h-5 bg-gray-200 dark:bg-gray-700 mx-1.5 sm:mx-2 shrink-0"></div>
           {/* Mobile Theme Toggle */}
           <button
             type="button"
-            onClick={() => setDarkMode(!darkMode)}
+            onClick={toggleDarkMode}
             aria-label="Toggle color mode"
-            className="rounded-md p-2 text-gray-400 hover:text-gray-700 dark:hover:text-gray-200 transition-all duration-300 shrink-0"
+            title={darkMode ? "Switch to light mode" : "Switch to dark mode"}
+            className="w-9 h-9 flex items-center justify-center rounded-full text-gray-400 hover:text-gray-700 dark:hover:text-gray-200 transition-colors duration-200 shrink-0 cursor-pointer"
           >
-            {darkMode ? <Sun className="size-5" /> : <Moon className="size-5" />}
+            {darkMode ? (
+              <Sun className="size-5 text-amber-400 shrink-0" />
+            ) : (
+              <Moon className="size-5 text-purple-600 dark:text-purple-400 shrink-0" />
+            )}
           </button>
         </nav>
       </header>

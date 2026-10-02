@@ -23,9 +23,10 @@ export default function App() {
   // Navigation and scroll tracking
   const [activeSection, setActiveSection] = useState("home");
 
-  // Sync theme with document class
-  useEffect(() => {
-    if (darkMode) {
+  const toggleDarkMode = () => {
+    const nextDark = !darkMode;
+    setDarkMode(nextDark);
+    if (nextDark) {
       document.documentElement.classList.add("dark");
       document.documentElement.classList.remove("light");
       localStorage.setItem("theme", "dark");
@@ -34,7 +35,18 @@ export default function App() {
       document.documentElement.classList.remove("dark");
       localStorage.setItem("theme", "light");
     }
-  }, [darkMode]);
+  };
+
+  // Sync theme with document class on initial mount
+  useEffect(() => {
+    if (darkMode) {
+      document.documentElement.classList.add("dark");
+      document.documentElement.classList.remove("light");
+    } else {
+      document.documentElement.classList.add("light");
+      document.documentElement.classList.remove("dark");
+    }
+  }, []);
 
   // Scroll spy & Scroll Animation triggers
   useEffect(() => {
@@ -56,20 +68,22 @@ export default function App() {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
             entry.target.classList.add("is-visible");
+            animObserver.unobserve(entry.target);
           }
         });
       },
-      { threshold: 0.1 }
+      { threshold: 0.15, rootMargin: "0px 0px -30px 0px" }
     );
 
     sections.forEach((id) => {
       const el = document.getElementById(id);
       if (el) {
         navObserver.observe(el);
-        const animatedElements = el.querySelectorAll(".scroll-animate");
-        animatedElements.forEach((child) => animObserver.observe(child));
       }
     });
+
+    const animatedElements = document.querySelectorAll("[class*='scroll-animate']");
+    animatedElements.forEach((child) => animObserver.observe(child));
 
     // Handle scroll edge cases (very top or very bottom of page)
     const handleScroll = () => {
@@ -107,7 +121,7 @@ export default function App() {
   };
 
   return (
-    <div className="relative min-h-screen text-gray-900 bg-[#f4f6f9] dark:bg-gray-950 dark:text-white font-sans overflow-x-hidden transition-colors duration-300">
+    <div className="relative min-h-screen text-gray-900 dark:text-white font-sans overflow-x-hidden">
       
       {/* BACKGROUND TEXTURE */}
       <img
@@ -120,7 +134,7 @@ export default function App() {
       {/* FIXED NAVIGATION */}
       <Navbar
         darkMode={darkMode}
-        setDarkMode={setDarkMode}
+        toggleDarkMode={toggleDarkMode}
         activeSection={activeSection}
         scrollToSection={scrollToSection}
       />

@@ -4,16 +4,21 @@ import { publicationsData } from "../data";
 
 export default function Publications() {
   return (
-    <section id="publications" className="py-16 max-w-5xl mx-auto overflow-hidden">
-      <h2 className="text-3xl font-bold text-center mb-12 text-gray-900 dark:text-white scroll-animate">
-        Publications
-      </h2>
+    <section id="publications" className="py-16 max-w-5xl mx-auto">
+      <div className="mx-auto max-w-2xl text-center mb-10">
+        <h2 className="text-3xl font-bold tracking-tight text-gray-900 dark:text-white sm:text-4xl scroll-animate">
+          Publications
+        </h2>
+        <p className="mt-3 text-lg leading-8 text-gray-600 dark:text-gray-400 scroll-animate">
+          Peer-reviewed work that connects systems, infrastructure, and practical engineering solutions.
+        </p>
+      </div>
 
       <div className="space-y-8">
-        {publicationsData.map((pub) => (
+        {publicationsData.map((pub, idx) => (
           <article
             key={pub.id}
-            className="scroll-animate grid gap-8 rounded-2xl border border-gray-100 bg-white/80 dark:bg-gray-900/60 p-5 shadow-sm sm:p-6 lg:grid-cols-[1.25fr_0.75fr] lg:p-8 dark:border-gray-800 transition-colors duration-300"
+            className="scroll-animate grid gap-8 rounded-2xl border border-gray-100 bg-white/80 dark:bg-gray-900/60 p-5 shadow-sm sm:p-6 lg:grid-cols-[1.25fr_0.75fr] lg:p-8 dark:border-gray-800"
           >
             <div className="flex flex-col">
               {/* Tags */}
@@ -21,7 +26,7 @@ export default function Publications() {
                 {pub.tags?.map((tag, idx) => (
                   <span
                     key={idx}
-                    className="font-medium inline-flex items-center text-[10px] px-2.5 py-1 gap-1 rounded-full bg-gray-50/50 dark:bg-gray-950/40 text-gray-700 dark:text-gray-300 border border-gray-200/60 dark:border-gray-800"
+                    className="font-medium inline-flex items-center text-xs px-2.5 py-1 gap-1 rounded-full bg-gray-50/50 dark:bg-gray-950/40 text-gray-700 dark:text-gray-300 border border-gray-200/60 dark:border-gray-800"
                   >
                     {tag}
                   </span>
@@ -49,7 +54,7 @@ export default function Publications() {
                       href={pub.doiUrl}
                       rel="noopener noreferrer"
                       target="_blank"
-                      className="font-medium text-segawa-plum hover:text-segawa-plum/80 dark:text-segawa-plum-light dark:hover:text-segawa-plum-light/80 transition-colors underline"
+                      className="font-medium text-purple-700 hover:text-purple-600 dark:text-purple-400 dark:hover:text-purple-300 transition-colors underline"
                     >
                       {pub.doi}
                     </a>
@@ -99,10 +104,10 @@ export default function Publications() {
                   <div className="text-xs font-semibold text-gray-500 dark:text-gray-400">
                     {stat.label}
                   </div>
-                  <div className="mt-1 text-2xl font-bold text-gray-900 dark:text-white">
+                  <div className="mt-2 text-2xl font-bold text-gray-900 dark:text-white">
                     {stat.value}
                   </div>
-                  <div className="mt-0.5 text-xs text-gray-600 dark:text-gray-400">
+                  <div className="mt-1 text-sm leading-5 text-gray-600 dark:text-gray-400">
                     {stat.desc}
                   </div>
                 </div>

@@ -40,7 +40,7 @@ export default function Services() {
       <h2 className="text-3xl font-bold text-center mb-4 text-gray-900 dark:text-white scroll-animate">
         What I Do
       </h2>
-      <p className="text-center text-gray-600 dark:text-gray-400 max-w-xl mx-auto mb-12 scroll-animate" style={{ transitionDelay: "0.05s" }}>
+      <p className="text-center text-gray-600 dark:text-gray-400 max-w-xl mx-auto mb-12 scroll-animate">
         I work at the intersection of development and infrastructure, making sure things not only look great but run smoothly behind the scenes.
       </p>
       
@@ -49,10 +49,9 @@ export default function Services() {
           <div
             key={idx}
             className="rounded-lg bg-white dark:bg-gray-800 border border-gray-100 dark:border-gray-800 scroll-animate"
-            style={{ transitionDelay: srv.delay }}
           >
             <div className="p-4 sm:p-5">
-              <div className="size-10 rounded-full flex items-center justify-center mb-3 bg-gray-50 dark:bg-gray-900 border border-gray-200 dark:border-gray-700 text-gray-700 dark:text-gray-300">
+              <div className="size-10 rounded-full flex items-center justify-center mb-3 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 text-gray-700 dark:text-gray-300">
                 {srv.icon}
               </div>
               <h3 className="text-sm font-semibold text-gray-900 dark:text-white mb-1.5">

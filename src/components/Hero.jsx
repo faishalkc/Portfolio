@@ -21,15 +21,15 @@ export default function Hero() {
             Halo, I'm Muhammad Faishal Hady!
           </h1>
           
-          <h2 className="text-lg md:text-xl font-medium text-segawa-plum dark:text-segawa-plum-light mb-6 scroll-animate" style={{ transitionDelay: "0.2s" }}>
+          <h2 className="text-lg md:text-xl font-medium text-purple-600 dark:text-purple-400 mb-6 scroll-animate">
             IT Support | Fullstack Web Engineer | Network Engineer
           </h2>
           
-          <p className="text-lg text-gray-600 dark:text-gray-400 mb-10 max-w-lg leading-relaxed scroll-animate" style={{ transitionDelay: "0.3s" }}>
+          <p className="text-lg text-gray-600 dark:text-gray-400 mb-10 max-w-lg leading-relaxed scroll-animate">
             IT Support by dedication. Fullstack Web Engineer by craft. Network Engineer by infrastructure. Troubleshooting, building, and securing the digital systems of tomorrow.
           </p>
           
-          <div className="flex flex-wrap items-center justify-center md:justify-start gap-6 scroll-animate" style={{ transitionDelay: "0.4s" }}>
+          <div className="flex flex-wrap items-center justify-center md:justify-start gap-6 scroll-animate">
             {/* Download CV Button */}
             <a
               href="/CV.pdf"
@@ -57,7 +57,7 @@ export default function Hero() {
         </div>
 
         {/* Profile Avatar */}
-        <div className="shrink-0 relative scroll-animate" style={{ transitionDelay: "0.1s" }}>
+        <div className="shrink-0 relative scroll-animate">
           <img
             src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgrcj1P4Ljoi_nI8E8SLArxDzKL5t1G9C3q91JpAlI2OMqkCMJefGa7tnkCMlhsqw1YDIYEvKqp6xvdjD5ufQhp_aCo5MjStb9-ddu9dT3vjs_cu8_CvfRowVxX0uz5IsRhQjqVLcCaptIhNt0mH_cYreyvs_EPME6cj2osEsB_ndAYzAKyj-1R3ujadpY/s1600/1767004885126.jpg"
             alt="Muhammad Faishal Hady"
