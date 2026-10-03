@@ -15,7 +15,6 @@ export default function Experience() {
             className="group relative flex flex-1 gap-3 scroll-animate"
           >
             
-            {/* Timeline track */}
             <div className="relative flex items-center gap-1.5 flex-col">
               <span className="inline-flex items-center justify-center shrink-0 select-none rounded-full align-middle bg-gray-100 dark:bg-gray-800 size-8">
                 <div className="h-3 w-3 rounded-full bg-purple-600 dark:bg-purple-400 border-2 border-white dark:border-gray-900 ring-2 ring-gray-100 dark:ring-gray-800"></div>
@@ -25,7 +24,6 @@ export default function Experience() {
               )}
             </div>
             
-            {/* Timeline content details */}
             <div className="w-full mt-1.5 pb-6.5">
               <div className="text-gray-400 text-xs/5 uppercase tracking-wider mb-1">
                 {exp.period}

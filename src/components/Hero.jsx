@@ -14,8 +14,6 @@ export default function Hero() {
   return (
     <section id="home" className="min-h-[85vh] flex items-center pt-24 pb-16">
       <div className="max-w-6xl mx-auto w-full flex flex-col-reverse md:flex-row items-center justify-between gap-12 md:gap-24">
-        
-        {/* Intro text */}
         <div className="flex-1 flex flex-col items-center md:items-start text-center md:text-left">
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 dark:text-white mb-4 tracking-tight scroll-animate">
             Halo, I'm Muhammad Faishal Hady!
@@ -30,7 +28,6 @@ export default function Hero() {
           </p>
           
           <div className="flex flex-wrap items-center justify-center md:justify-start gap-6 scroll-animate">
-            {/* Download CV Button */}
             <a
               href="/CV.pdf"
               className="font-medium inline-flex items-center disabled:cursor-not-allowed aria-disabled:cursor-not-allowed disabled:opacity-75 aria-disabled:opacity-75 transition-colors py-2 text-sm gap-2 text-white bg-slate-900 dark:bg-slate-100 dark:text-slate-900 hover:bg-slate-800 dark:hover:bg-slate-200 px-6 rounded-full shadow-sm"
@@ -38,7 +35,6 @@ export default function Hero() {
               <Download className="size-5" /> Download CV
             </a>
             
-            {/* Social media connections */}
             <div className="flex items-center gap-4">
               {socials.map((social, idx) => (
                 <a
@@ -56,7 +52,6 @@ export default function Hero() {
           </div>
         </div>
 
-        {/* Profile Avatar */}
         <div className="shrink-0 relative scroll-animate">
           <img
             src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgrcj1P4Ljoi_nI8E8SLArxDzKL5t1G9C3q91JpAlI2OMqkCMJefGa7tnkCMlhsqw1YDIYEvKqp6xvdjD5ufQhp_aCo5MjStb9-ddu9dT3vjs_cu8_CvfRowVxX0uz5IsRhQjqVLcCaptIhNt0mH_cYreyvs_EPME6cj2osEsB_ndAYzAKyj-1R3ujadpY/s1600/1767004885126.jpg"

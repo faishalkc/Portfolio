@@ -21,7 +21,6 @@ export default function Publications() {
             className="scroll-animate grid gap-8 rounded-2xl border border-gray-100 bg-white/80 dark:bg-gray-900/60 p-5 shadow-sm sm:p-6 lg:grid-cols-[1.25fr_0.75fr] lg:p-8 dark:border-gray-800"
           >
             <div className="flex flex-col">
-              {/* Tags */}
               <div className="mb-5 flex flex-wrap gap-2">
                 {pub.tags?.map((tag, idx) => (
                   <span
@@ -33,12 +32,10 @@ export default function Publications() {
                 ))}
               </div>
 
-              {/* Title */}
               <h3 className="max-w-3xl text-xl font-bold leading-tight text-gray-900 sm:text-2xl dark:text-white">
                 {pub.title}
               </h3>
 
-              {/* Details */}
               <div className="mt-4 space-y-2 text-sm text-gray-600 dark:text-gray-400">
                 <p className="font-medium text-gray-800 dark:text-gray-200">
                   {pub.journal}
@@ -62,12 +59,10 @@ export default function Publications() {
                 )}
               </div>
 
-              {/* Summary / Description */}
               <p className="mt-5 max-w-3xl text-base leading-7 text-gray-700 dark:text-gray-300">
                 {pub.description}
               </p>
 
-              {/* Actions */}
               <div className="mt-6 flex flex-wrap gap-3">
                 {pub.paperUrl && (
                   <a
@@ -94,7 +89,6 @@ export default function Publications() {
               </div>
             </div>
 
-            {/* Stats Panel */}
             <div className="grid grid-cols-2 gap-3 self-start sm:gap-4 lg:grid-cols-1">
               {pub.stats?.map((stat, idx) => (
                 <div

@@ -10,7 +10,6 @@ import Projects from "./components/Projects";
 import Mascot from "./components/Mascot";
 
 export default function App() {
-  // Theme state
   const [darkMode, setDarkMode] = useState(() => {
     if (typeof window !== "undefined") {
       const savedTheme = localStorage.getItem("theme");
@@ -20,7 +19,6 @@ export default function App() {
     return false;
   });
 
-  // Navigation and scroll tracking
   const [activeSection, setActiveSection] = useState("home");
 
   const toggleDarkMode = () => {
@@ -37,7 +35,6 @@ export default function App() {
     }
   };
 
-  // Sync theme with document class on initial mount
   useEffect(() => {
     if (darkMode) {
       document.documentElement.classList.add("dark");
@@ -48,20 +45,8 @@ export default function App() {
     }
   }, []);
 
-  // Scroll spy & Scroll Animation triggers
   useEffect(() => {
     const sections = ["home", "about", "services", "skills", "experience", "publications", "projects"];
-    
-    const navObserver = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            setActiveSection(entry.target.id);
-          }
-        });
-      },
-      { threshold: 0.15, rootMargin: "-20% 0px -20% 0px" }
-    );
 
     const animObserver = new IntersectionObserver(
       (entries) => {
@@ -75,40 +60,55 @@ export default function App() {
       { threshold: 0.15, rootMargin: "0px 0px -30px 0px" }
     );
 
-    sections.forEach((id) => {
-      const el = document.getElementById(id);
-      if (el) {
-        navObserver.observe(el);
-      }
-    });
-
     const animatedElements = document.querySelectorAll("[class*='scroll-animate']");
     animatedElements.forEach((child) => animObserver.observe(child));
 
-    // Handle scroll edge cases (very top or very bottom of page)
-    const handleScroll = () => {
+    let ticking = false;
+    const updateActiveSection = () => {
       const scrollPosition = window.scrollY + window.innerHeight;
       const totalHeight = document.documentElement.scrollHeight;
 
-      if (window.scrollY < 50) {
+      if (window.scrollY < 80) {
         setActiveSection("home");
         return;
       }
 
-      if (scrollPosition >= totalHeight - 100) {
+      if (scrollPosition >= totalHeight - 60) {
         setActiveSection("projects");
+        return;
+      }
+
+      const referenceY = window.innerHeight * 0.35;
+      for (let i = sections.length - 1; i >= 0; i--) {
+        const el = document.getElementById(sections[i]);
+        if (el) {
+          const rect = el.getBoundingClientRect();
+          if (rect.top <= referenceY && rect.bottom > 0) {
+            setActiveSection(sections[i]);
+            return;
+          }
+        }
+      }
+    };
+
+    const handleScroll = () => {
+      if (!ticking) {
+        window.requestAnimationFrame(() => {
+          updateActiveSection();
+          ticking = false;
+        });
+        ticking = true;
       }
     };
 
     window.addEventListener("scroll", handleScroll, { passive: true });
+    window.addEventListener("resize", handleScroll, { passive: true });
+    updateActiveSection();
 
     return () => {
-      sections.forEach((id) => {
-        const el = document.getElementById(id);
-        if (el) navObserver.unobserve(el);
-      });
       animObserver.disconnect();
       window.removeEventListener("scroll", handleScroll);
+      window.removeEventListener("resize", handleScroll);
     };
   }, []);
 
@@ -122,8 +122,6 @@ export default function App() {
 
   return (
     <div className="relative min-h-screen text-gray-900 dark:text-white font-sans overflow-x-hidden">
-      
-      {/* BACKGROUND TEXTURE */}
       <img
         src="/background.png"
         loading="lazy"
@@ -131,7 +129,6 @@ export default function App() {
         className="fixed inset-0 w-full h-full object-cover z-0 pointer-events-none opacity-[0.03] dark:opacity-[0.02]"
       />
 
-      {/* FIXED NAVIGATION */}
       <Navbar
         darkMode={darkMode}
         toggleDarkMode={toggleDarkMode}
@@ -139,35 +136,17 @@ export default function App() {
         scrollToSection={scrollToSection}
       />
 
-      {/* MAIN CONTAINER */}
       <main className="relative w-full mx-auto max-w-6xl md:min-w-[48rem] md:max-w-[min(72rem,calc(100%-64px))] px-4 md:pl-24 md:pr-6">
-        
-        {/* HERO / HOME SECTION */}
         <Hero />
-
-        {/* ABOUT SECTION */}
         <About />
-
-        {/* SERVICES SECTION */}
         <Services />
-
-        {/* SKILLS SECTION */}
         <Skills />
-
-        {/* EXPERIENCE SECTION */}
         <Experience />
-
-        {/* PUBLICATIONS SECTION */}
         <Publications />
-
-        {/* PROJECTS SECTION */}
         <Projects />
-
       </main>
 
-      {/* FLOATING MASCOT BUTTON (TAKODACHI EASTER EGG) */}
       <Mascot />
-
     </div>
   );
 }

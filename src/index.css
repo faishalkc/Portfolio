@@ -1,7 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&display=swap');
 @import "tailwindcss";
 
-/* 1. THEME DEFINITIONS & CUSTOM TOKENS (Dwipapap exact color palette) */
 @theme {
   --font-sans: "Figtree", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
   --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
@@ -15,22 +14,18 @@
   --color-gray-750: #293548;
 }
 
-/* 2. TAILWIND DARK VARIANT */
 @variant dark (&:where(.dark, .dark *));
 
-/* 3. COLOR TOKENS (LIGHT MODE / DEFAULT - dwipapap) */
 :root {
   --bg-color: #f8fafc;
   --text-color: #0f172a;
 }
 
-/* 4. COLOR TOKENS (DARK MODE OVERRIDES - dwipapap) */
 .dark {
   --bg-color: #020617;
   --text-color: #f1f5f9;
 }
 
-/* 5. BASE DOCUMENT STYLES */
 html, body {
   background-color: var(--bg-color);
   color: var(--text-color);
@@ -41,8 +36,6 @@ html, body, button, input, textarea, select {
   font-family: var(--font-sans);
 }
 
-/* 6. INSTANT THEME SWITCHING (Zero animation lag on dark/light switch) */
-/* Scroll animations handle viewport entrance only, with no color transition lag */
 .scroll-animate {
   opacity: 0;
   transform: translateY(30px);
@@ -111,7 +104,6 @@ html, body, button, input, textarea, select {
   animation: fadeIn 0.4s ease-out forwards;
 }
 
-/* Accessibility: Respect users with vestibular / motion sensitivities */
 @media (prefers-reduced-motion: reduce) {
   .scroll-animate,
   .scroll-animate-left,
@@ -127,7 +119,6 @@ html, body, button, input, textarea, select {
   }
 }
 
-/* Hide scrollbars but keep functionality */
 .no-scrollbar::-webkit-scrollbar {
   display: none;
 }

@@ -6,7 +6,7 @@ import { projectsData } from "../data";
 export default function Projects() {
   const [showProjects, setShowProjects] = useState(false);
   const [activeImage, setActiveImage] = useState(null);
-  const [viewMode, setViewMode] = useState("grid3"); // "grid3", "grid2", "list"
+  const [viewMode, setViewMode] = useState("grid3");
 
   return (
     <section id="projects" className="py-16 max-w-5xl mx-auto">
@@ -21,7 +21,15 @@ export default function Projects() {
         <div className="scroll-animate">
           <button
             type="button"
-            onClick={() => setShowProjects(!showProjects)}
+            onClick={() => {
+              setShowProjects((prev) => {
+                const next = !prev;
+                setTimeout(() => {
+                  window.dispatchEvent(new Event("scroll"));
+                }, 50);
+                return next;
+              });
+            }}
             className="font-medium inline-flex items-center transition-colors py-2.5 text-sm gap-2 text-white bg-slate-900 dark:bg-slate-100 dark:text-slate-900 hover:bg-slate-800 dark:hover:bg-slate-200 px-6 rounded-full shadow-sm cursor-pointer"
           >
             <Folder className="size-5" /> What I've made
@@ -31,7 +39,6 @@ export default function Projects() {
 
       {showProjects && (
         <>
-          {/* VIEW MODE SWITCHER (DESKTOP) */}
           <div className="hidden md:flex justify-end gap-2 mb-6 px-1 animate-fadeIn">
             <div className="inline-flex items-center gap-1 bg-white dark:bg-gray-800 p-1 rounded-full border border-gray-200/80 dark:border-gray-700 shadow-xs">
               <button
@@ -111,7 +118,6 @@ export default function Projects() {
                     referrerPolicy="no-referrer"
                   />
 
-                  {/* Hover Preview Button */}
                   <div
                     className="absolute top-3 right-3 z-10 flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-slate-900/80 hover:bg-slate-900 text-white text-[11px] font-semibold tracking-wide shadow-md opacity-0 group-hover:opacity-100 transition-all duration-300 border border-white/10 backdrop-blur-xs transform translate-y-1 group-hover:translate-y-0 cursor-pointer"
                   >
@@ -123,7 +129,7 @@ export default function Projects() {
                 <div className="p-6 flex-1 flex flex-col justify-between">
                   <div>
                     <div className="flex items-center justify-between gap-2 mb-3">
-                      <span className="text-xs font-semibold text-purple-700 dark:text-purple-300 uppercase tracking-wider bg-purple-50 dark:bg-purple-900/30 px-2.5 py-1 rounded">
+                      <span className="text-xs font-semibold text-gray-700 dark:text-gray-300 uppercase tracking-wider bg-gray-100 dark:bg-gray-800 border border-gray-200/60 dark:border-gray-700/60 px-2.5 py-1 rounded">
                         {project.category}
                       </span>
                       {project.metrics && (
@@ -180,11 +186,9 @@ export default function Projects() {
         </>
       )}
 
-      {/* IMAGE PREVIEW MODAL */}
       <AnimatePresence>
         {activeImage && (
           <div className="fixed inset-0 z-[100] flex items-center justify-center p-4">
-            {/* Backdrop */}
             <motion.div
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
@@ -193,7 +197,6 @@ export default function Projects() {
               className="absolute inset-0 bg-black/85 backdrop-blur-md cursor-pointer"
             />
 
-            {/* Modal Content */}
             <motion.div
               initial={{ opacity: 0, scale: 0.95, y: 15 }}
               animate={{ opacity: 1, scale: 1, y: 0 }}
@@ -201,7 +204,6 @@ export default function Projects() {
               transition={{ type: "spring", duration: 0.3 }}
               className="relative max-w-4xl w-full bg-white dark:bg-gray-900 rounded-xl overflow-hidden shadow-2xl z-10 border border-gray-100 dark:border-gray-800"
             >
-              {/* Close Button */}
               <button
                 type="button"
                 onClick={() => setActiveImage(null)}
@@ -211,7 +213,6 @@ export default function Projects() {
                 <X className="size-4" />
               </button>
 
-              {/* Image Container */}
               <div className="w-full flex items-center justify-center bg-gray-50 dark:bg-gray-950 p-2 sm:p-4 max-h-[75vh] overflow-hidden">
                 <img
                   src={activeImage.src}
@@ -221,7 +222,6 @@ export default function Projects() {
                 />
               </div>
 
-              {/* Footer Panel */}
               <div className="px-6 py-4 bg-white dark:bg-gray-900 border-t border-gray-100 dark:border-gray-800 flex items-center justify-between gap-4">
                 <h4 className="text-base font-bold text-gray-900 dark:text-white truncate">
                   {activeImage.title}

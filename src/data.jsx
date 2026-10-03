@@ -413,11 +413,18 @@ export const publicationsData = [
     doi: "10.33772/jfe.v11i1.1111",
     doiUrl: "https://doi.org/10.33772/jfe.v11i1.1111",
     paperUrl: "https://elektroda.uho.ac.id/index.php/journal/article/view/1111",
-    description: "This study implements a methane gas (CH₄) leakage monitoring system on peatlands using the IoT-based Constrained Application Protocol (CoAP). The system utilizes a NodeMCU ESP8266 as a CoAP Client and an MQ-5 sensor to detect gas concentrations in real-time with low power consumption and high bandwidth efficiency.",
-    tags: ["CoAP", "IoT", "MQ-5 Sensor", "QoS Analysis", "Energy Efficiency"],
+    description: "This study implements a methane gas (CH₄) leakage monitoring system on peatlands using the IoT-based Constrained Application Protocol (CoAP). The system utilizes a NodeMCU ESP8266 connected to an MQ-5 sensor as the CoAP Client to detect gas concentrations, and an ESP32 micro-controller configured as the CoAP Server to receive client requests and transmit data to the web-based monitoring platform, achieving low power consumption and high bandwidth efficiency.",
+    tags: [
+      "CoAP",
+      "CoAP Server",
+      "ESP32",
+      "Power",
+      "Delay",
+      "Throughput",
+    ],
     stats: [
       {
-        label: "Average Delay",
+        label: "Delay",
         value: "2.29 ms",
         desc: "Very Good based on TIPHON standards"
       },
@@ -433,10 +440,47 @@ export const publicationsData = [
       },
       {
         label: "Hardware",
-        value: "ESP8266 & MQ-5",
-        desc: "NodeMCU as CoAP Client & gas sensor"
+        value: "ESP8266 & ESP32",
+        desc: "ESP8266 as CoAP Client & ESP32 as CoAP Server"
       }
     ]
   }
+];
+
+export const bootcampsData = [
+  {
+    year: "2026",
+    institutions: [
+      {
+        name: "ITBox (from Course-Net Indonesia)",
+        items: [
+          "Basic Front-End Web Development",
+          "Basic Back-End Web Development",
+          "JavaScript Algorithm Fundamentals",
+          "Modern JavaScript Fundamentals & Full-Stack Architecture",
+        ],
+      },
+    ],
+  },
+  {
+    year: "2024",
+    institutions: [
+      {
+        name: "ITBox (from Course-Net Indonesia)",
+        items: [
+          "Programming Algorithms in C",
+          "Object-Oriented Programming with Java",
+          "Database Course Level Basic",
+          "Computer Networking Basics",
+          "Computer Network Course Level Basic",
+          "Computer Network Course Level Intermediate",
+          "Computer Network Course Level Advanced",
+          "Cyber Security Course Level Basic",
+          "Cyber Security Course Level Intermediate",
+          "Cyber Security Course Level Advanced",
+        ],
+      },
+    ],
+  },
 ];
 

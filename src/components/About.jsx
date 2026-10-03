@@ -1,12 +1,11 @@
 import React from "react";
 import { GraduationCap } from "lucide-react";
+import { bootcampsData } from "../data";
 
 export default function About() {
   return (
     <section id="about" className="py-16 max-w-5xl mx-auto">
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-        
-        {/* Left Card - Biography */}
         <div className="rounded-lg overflow-hidden bg-white dark:bg-gray-800 border border-gray-100 dark:border-gray-800 shadow-sm h-full scroll-animate">
           <div className="p-4 sm:p-6 flex flex-col h-full">
             <div className="flex flex-col h-full">
@@ -44,7 +43,6 @@ export default function About() {
           </div>
         </div>
         
-        {/* Right Card - Vision / Beyond Code */}
         <div className="rounded-lg bg-white dark:bg-gray-800 border border-gray-100 dark:border-gray-800 relative h-full overflow-hidden p-4 sm:p-6 scroll-animate">
           <div className="absolute top-0 right-0 p-6 opacity-10 dark:opacity-5 pointer-events-none">
             <svg width="120" height="120" fill="none" viewBox="0 0 120 120">
@@ -73,36 +71,37 @@ export default function About() {
 
       </div>
 
-      {/* Bootcamps & Certifications */}
       <div className="mt-6 rounded-lg bg-white dark:bg-gray-800 border border-gray-100 dark:border-gray-800 p-4 sm:p-6 scroll-animate">
         <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-6">
           Bootcamps &amp; Certifications
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-          <div>
-            <h3 className="text-base font-bold text-gray-700 dark:text-gray-300 mb-3">2026 — ITBox (from Course-Net Indonesia)</h3>
-            <ul className="grid grid-cols-1 gap-2 text-sm leading-relaxed text-gray-600 dark:text-gray-300">
-              <li className="flex items-center gap-1.5">• Basic Front-End Web Development</li>
-              <li className="flex items-center gap-1.5">• Basic Back-End Web Development</li>
-              <li className="flex items-center gap-1.5">• JavaScript Algorithm Fundamentals</li>
-              <li className="flex items-center gap-1.5">• Modern JavaScript Fundamentals &amp; Full-Stack Architecture</li>
-            </ul>
-          </div>
-          <div>
-            <h3 className="text-base font-bold text-gray-700 dark:text-gray-300 mb-3">2024 — ITBox (from Course-Net Indonesia)</h3>
-            <ul className="grid grid-cols-1 gap-2 text-sm leading-relaxed text-gray-600 dark:text-gray-300">
-              <li className="flex items-center gap-1.5">• Programming Algorithms in C</li>
-              <li className="flex items-center gap-1.5">• Object-Oriented Programming with Java</li>
-              <li className="flex items-center gap-1.5">• Database Course Level Basic</li>
-              <li className="flex items-center gap-1.5">• Computer Networking Basics</li>
-              <li className="flex items-center gap-1.5">• Computer Network Course Level Basic</li>
-              <li className="flex items-center gap-1.5">• Computer Network Course Level Intermediate</li>
-              <li className="flex items-center gap-1.5">• Computer Network Course Level Advanced</li>
-              <li className="flex items-center gap-1.5">• Cyber Security Course Level Basic</li>
-              <li className="flex items-center gap-1.5">• Cyber Security Course Level Intermediate</li>
-              <li className="flex items-center gap-1.5">• Cyber Security Course Level Advanced</li>
-            </ul>
-          </div>
+          {bootcampsData.map((group) => (
+            <div key={group.year} className="space-y-4">
+              <div className="flex items-center gap-2">
+                <span className="text-lg font-bold text-gray-900 dark:text-white">
+                  {group.year}
+                </span>
+                <span className="h-px flex-1 bg-gray-100 dark:bg-gray-700/60"></span>
+              </div>
+              <div className="space-y-5">
+                {group.institutions.map((inst, iIdx) => (
+                  <div key={iIdx}>
+                    <h3 className="text-sm font-semibold text-gray-700 dark:text-gray-300 mb-2.5">
+                      {inst.name}
+                    </h3>
+                    <ul className="grid grid-cols-1 gap-2 text-sm leading-relaxed text-gray-600 dark:text-gray-300">
+                      {inst.items.map((item, itemIdx) => (
+                        <li key={itemIdx} className="flex items-center gap-1.5">
+                          • {item}
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                ))}
+              </div>
+            </div>
+          ))}
         </div>
       </div>
     </section>

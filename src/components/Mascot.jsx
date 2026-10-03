@@ -16,7 +16,6 @@ export default function Mascot() {
     }
   };
 
-  // Close mascot popup when clicking outside
   useEffect(() => {
     const handleOutsideClick = (e) => {
       const target = e.target;
@@ -31,14 +30,11 @@ export default function Mascot() {
   return (
     <div id="mascot-container" className="fixed bottom-24 md:bottom-8 right-4 md:right-8 z-50">
       <div className="relative">
-        {/* Mascot Popup Content */}
         {mascotOpen && (
           <div className="absolute bottom-20 md:bottom-28 right-0 w-64 p-3 bg-white dark:bg-gray-800 border border-gray-200/80 dark:border-gray-700/80 rounded-2xl shadow-2xl z-50 text-left animate-fadeIn">
-            {/* Arrow Pointer */}
             <div className="absolute bottom-[-6px] right-6 md:right-10 w-3 h-3 bg-white dark:bg-gray-800 border-r border-b border-gray-200/80 dark:border-gray-700/80 rotate-45"></div>
 
             <div className="grid grid-cols-2 gap-3">
-              {/* 1. Blog */}
               <a
                 href="https://www.faishalkc.eu.org/"
                 target="_blank"
@@ -53,7 +49,6 @@ export default function Mascot() {
                 <span className="text-[10px] text-gray-500 dark:text-gray-400 mt-1 leading-none">Personal website</span>
               </a>
 
-              {/* 2. About Me */}
               <button
                 type="button"
                 onClick={() => handleScrollTo("about")}
@@ -66,7 +61,6 @@ export default function Mascot() {
                 <span className="text-[10px] text-gray-500 dark:text-gray-400 mt-1 leading-none">Background & exp</span>
               </button>
 
-              {/* 3. Projects */}
               <button
                 type="button"
                 onClick={() => handleScrollTo("projects")}
@@ -79,7 +73,6 @@ export default function Mascot() {
                 <span className="text-[10px] text-gray-500 dark:text-gray-400 mt-1 leading-none">What I've built</span>
               </button>
 
-              {/* 4. Anime Watchlist */}
               <a
                 href="#"
                 onClick={(e) => {
@@ -98,7 +91,6 @@ export default function Mascot() {
           </div>
         )}
 
-        {/* Mascot icon trigger */}
         <button
           type="button"
           onClick={handleMascotClick}

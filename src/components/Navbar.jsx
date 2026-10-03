@@ -39,7 +39,6 @@ export default function Navbar({
 
   return (
     <>
-      {/* DESKTOP FIXED SIDEBAR NAVIGATION (LEFT) */}
       <header className="hidden md:block fixed top-1/2 -translate-y-1/2 left-6 z-50">
         <nav className="inline-flex flex-col items-center bg-white dark:bg-gray-900 rounded-full px-2.5 py-4 shadow-xl border border-gray-200 dark:border-gray-700/80 transition-all duration-300 backdrop-blur-md">
           <div className="flex flex-col items-center gap-2">
@@ -63,7 +62,6 @@ export default function Navbar({
 
           <div className="w-8 h-px bg-gray-200 dark:bg-gray-700 my-3"></div>
 
-          {/* Theme Toggle Button */}
           <button
             type="button"
             onClick={toggleDarkMode}
@@ -72,15 +70,14 @@ export default function Navbar({
             className="w-11 h-11 flex items-center justify-center rounded-full text-gray-400 hover:text-gray-800 dark:hover:text-gray-200 transition-colors duration-200 cursor-pointer"
           >
             {darkMode ? (
-              <Sun className="size-6 text-amber-400 shrink-0" />
+              <Sun className="size-6 shrink-0" />
             ) : (
-              <Moon className="size-6 text-purple-600 dark:text-purple-400 shrink-0" />
+              <Moon className="size-6 shrink-0" />
             )}
           </button>
         </nav>
       </header>
 
-      {/* MOBILE FIXED BOTTOM NAVIGATION */}
       <header className="md:hidden fixed bottom-8 left-1/2 -translate-x-1/2 z-50 w-max max-w-[95vw] pb-[max(0px,env(safe-area-inset-bottom))]">
         <nav className="flex items-center bg-white/95 dark:bg-gray-900/95 backdrop-blur-md rounded-full px-3 py-1.5 shadow-xl border border-gray-200 dark:border-gray-700 overflow-x-auto no-scrollbar">
           <div className="flex items-center gap-1 sm:gap-1.5">
@@ -101,7 +98,6 @@ export default function Navbar({
             ))}
           </div>
           <div className="w-px h-5 bg-gray-200 dark:bg-gray-700 mx-1.5 sm:mx-2 shrink-0"></div>
-          {/* Mobile Theme Toggle */}
           <button
             type="button"
             onClick={toggleDarkMode}
@@ -110,9 +106,9 @@ export default function Navbar({
             className="w-9 h-9 flex items-center justify-center rounded-full text-gray-400 hover:text-gray-700 dark:hover:text-gray-200 transition-colors duration-200 shrink-0 cursor-pointer"
           >
             {darkMode ? (
-              <Sun className="size-5 text-amber-400 shrink-0" />
+              <Sun className="size-5 shrink-0" />
             ) : (
-              <Moon className="size-5 text-purple-600 dark:text-purple-400 shrink-0" />
+              <Moon className="size-5 shrink-0" />
             )}
           </button>
         </nav>
