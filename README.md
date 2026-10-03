@@ -9,10 +9,10 @@
 [![Live Demo](https://img.shields.io/badge/Live_Demo-portfolio.faishalkc.eu.org-7C3AED?style=for-the-badge\&logo=googlechrome\&logoColor=white)](https://portfolio.faishalkc.eu.org/)
 [![GitHub Repository](https://img.shields.io/badge/GitHub-Repository-181717?style=for-the-badge\&logo=github\&logoColor=white)](https://github.com/faishalkc/Portfolio)
 
-![React](https://img.shields.io/badge/React-19.0.0-61DAFB?style=flat-square\&logo=react\&logoColor=black)
+![React](https://img.shields.io/badge/React-19.0.0-61DAFB?style=flat-square\&logo=react\&logoColor=white)
 ![Vite](https://img.shields.io/badge/Vite-6.0-646CFF?style=flat-square\&logo=vite\&logoColor=white)
 ![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-v4-06B6D4?style=flat-square\&logo=tailwindcss\&logoColor=white)
-![JavaScript](https://img.shields.io/badge/JavaScript-ES6+-F7DF1E?style=flat-square\&logo=javascript\&logoColor=black)
+![JavaScript](https://img.shields.io/badge/JavaScript-ES6+-F7DF1E?style=flat-square\&logo=javascript\&logoColor=white)
 ![License](https://img.shields.io/badge/License-Educational-green?style=flat-square)
 ![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)
 
@@ -57,14 +57,14 @@ This website serves as a central place to showcase my professional profile, tech
 | **React 19**        | ![React](https://img.shields.io/badge/React-20232A?style=flat-square\&logo=react\&logoColor=61DAFB)                | UI Library                       |
 | **JavaScript**      | ![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=flat-square\&logo=javascript\&logoColor=black)  | Programming Language (ES6+)      |
 | **Vite**            | ![Vite](https://img.shields.io/badge/Vite-B73BFE?style=flat-square\&logo=vite\&logoColor=FFD62E)                   | Next Generation Frontend Tooling |
-| **Tailwind CSS v4** | ![Tailwind](https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=flat-square\&logo=tailwindcss\&logoColor=white) | Utility-first CSS framework      |
+| **Tailwind CSS v4** | ![Tailwind](https://img.shields.io/badge/Tailwind-38B2AC?style=flat-square\&logo=tailwindcss\&logoColor=white) | Utility-first CSS framework      |
 | **HTML5**           | ![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=flat-square\&logo=html5\&logoColor=white)                 | Semantic Markup                  |
-| **CSS3**            | ![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=flat-square\&logo=css3\&logoColor=white)                    | Modern Styling                   |
+| **CSS3**            | ![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=flat-square\&logo=css\&logoColor=white)                    | Modern Styling                   |
 
 ### Libraries
 
 * ![Iconify](https://img.shields.io/badge/Iconify-1769AA?style=flat-square\&logo=iconify\&logoColor=white) **Iconify** — Comprehensive icon framework
-* ![Lucide](https://img.shields.io/badge/Lucide_Icons-F56565?style=flat-square\&logo=feather\&logoColor=white) **Lucide React** — Clean & consistent iconography
+* ![Lucide](https://img.shields.io/badge/Lucide_Icons-F56565?style=flat-square\&logo=icon\&logoColor=white) **Lucide React** — Clean & consistent iconography
 * ![Motion](https://img.shields.io/badge/Motion-0055FF?style=flat-square\&logo=framer\&logoColor=white) **Motion** — Fluid animations and micro-interactions
 
 ---
@@ -148,7 +148,7 @@ The website is optimized for:
 * 🖥️ **Desktop**
 * 💻 **Laptop**
 * 📱 **Tablet**
-* 📲 **Mobile devices**
+* 📱 **Mobile devices**
 
 ---
 
