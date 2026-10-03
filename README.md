@@ -28,8 +28,6 @@ This website serves as a central place to showcase my professional profile, tech
 
 🔗 **https://portfolio.faishalkc.eu.org/**
 
-[![Visit Site](https://img.shields.io/badge/View_Portfolio-Visit_Website-7C3AED?style=for-the-badge\&logo=safari\&logoColor=white)](https://portfolio.faishalkc.eu.org/)
-
 ---
 
 ## ✨ Features
